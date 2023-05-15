@@ -19,6 +19,13 @@
 
     <!-- Custom styles for this template-->
     <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+    .bg-scan-image {
+        background-image: url("public/images/scan.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
 
 </head>
 
@@ -35,32 +42,15 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row text-center">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-scan-image"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Scan Absen</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">SCAN ABSENSI</h1>
                                     </div>
-                                    <img src="public/assets/images/client-1.png" alt="logo scan">
+                                    <img src="public/images/logo-scan.png" class="mt-lg-5" width="50%" alt="logo scan">
                                     <hr>
-                                    <form class="user" action="" method="post">
-                                        <!-- <div class="form-group">
-                                            <input type="name" class="form-control form-control-user text-center"
-                                                name="nama" id="nama" placeholder="Masukan Nama">
-                                        </div> -->
-                                        <div class="form-group">
-                                            <input type="name" class="form-control form-control-user text-center"
-                                                name="id_card" id="id_card" placeholder="Hasil Scan ID Card" disabled>
-                                        </div>
-                                        <hr>
-
-                                        <div class="form-group">
-                                        </div>
-                                        <button href="guru" class="btn btn-primary btn-user btn-block">
-                                            Absen
-                                        </button>
-                                    </form>
-                                    <a href="./" class="btn btn-danger mt-5">Back to Dashboard</a>
+                                    <a href="./" class="btn btn-danger">Back to Dashboard</a>
                                 </div>
                             </div>
                         </div>
@@ -81,20 +71,20 @@
     <script src="public/assets/js/sb-admin-2.min.js"></script>
 
     <script>
-        function cekId() {
-            $.ajax({
-                type: "GET",
-                url: "query/rfid.php",
-                cache: false,
-                success: function (response) {
-                    // console.log(response);
-                    $("#id_card").val(response)
-                }
+    function cekId() {
+        $.ajax({
+            type: "GET",
+            url: "query/rfid.php",
+            cache: false,
+            success: function(response) {
+                // console.log(response);
+                $("#id_card").val(response)
+            }
 
 
-            });
-        }
-        setInterval(cekId, 1000);
+        });
+    }
+    setInterval(cekId, 1000);
     </script>
 </body>
 
