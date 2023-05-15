@@ -101,7 +101,7 @@
         }
 
         // Memanggil fungsi loadContent setiap detik
-        setInterval(loadContent, 200);
+        setInterval(loadContent, 1000);
     </script>
 </body>
 
