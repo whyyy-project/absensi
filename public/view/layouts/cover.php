@@ -31,6 +31,18 @@
     <!-- responsive style -->
     <link href="public/assets/css/responsive.css" rel="stylesheet" />
     <link rel="shortcut icon" href="public/assets/favicon.ico" />
+    <style>
+        #mobile-view {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            #mobile-view {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -49,7 +61,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav  ">
+                        <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
                             </li>
@@ -57,13 +69,18 @@
                                 <a class="nav-link" href="#topWeakly"> Weakly</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="shop.html">Top Years</a>
+                                <a class="nav-link" href="#topYears">Top Years</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="furniture.html"> About</a>
+                                <a class="nav-link" href="#about"> About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#tentang">Contact us</a>
+                            </li>
+                            <li class="nav-item" id="mobile-view">
+                                <a class="nav-link" href="login">
+                                    Login
+                                </a>
                             </li>
                         </ul>
                         <div class="user_option">

@@ -128,12 +128,10 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link,
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
   color: #24d278;
 }
-
 a,
 a:hover,
 a:focus {
