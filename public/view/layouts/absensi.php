@@ -48,7 +48,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">SCAN ABSENSI</h1>
                                     </div>
-                                    <img src="public/images/logo-scan.png" class="mt-lg-5" width="50%" alt="logo scan">
+                                    <div id="id_card"></div>
                                     <hr>
                                     <a href="./" class="btn btn-danger">Back to Dashboard</a>
                                 </div>
@@ -71,20 +71,31 @@
     <script src="public/assets/js/sb-admin-2.min.js"></script>
 
     <script>
-    function cekId() {
-        $.ajax({
-            type: "GET",
-            url: "query/rfid.php",
-            cache: false,
-            success: function(response) {
-                // console.log(response);
-                $("#id_card").val(response)
+    // Mendapatkan referensi ke elemen div dengan id "id_card"
+    var idCardDiv = document.getElementById("id_card");
+
+    // Fungsi untuk memuat isi file content.php ke dalam elemen div
+    function loadContent() {
+        // Membuat objek XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        // Menentukan metode dan URL untuk permintaan AJAX
+        xhr.open("GET", "query/rfid.php", true);
+
+        // Mengatur fungsi penanganan ketika permintaan selesai
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Mengisi isi div dengan respon dari content.php
+                idCardDiv.innerHTML = xhr.responseText;
             }
+        };
 
-
-        });
+        // Mengirim permintaan AJAX
+        xhr.send();
     }
-    setInterval(cekId, 1000);
+
+    // Memanggil fungsi loadContent setiap detik
+    setInterval(loadContent, 2000);
     </script>
 </body>
 
