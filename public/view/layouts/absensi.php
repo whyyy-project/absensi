@@ -22,11 +22,11 @@
     <link rel="shortcut icon" href="public/assets/favicon.ico">
 
     <style>
-        .bg-scan-image {
-            background-image: url("public/images/scan.jpg");
-            background-position: center;
-            background-size: cover;
-        }
+    .bg-scan-image {
+        background-image: url("public/images/scan.jpg");
+        background-position: center;
+        background-size: cover;
+    }
     </style>
 
 </head>
@@ -50,11 +50,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">SCAN ABSENSI</h1>
                                     </div>
-
-
                                     <div id="id_card"> </div>
-
-
                                     <hr>
                                     <a href="./" class="btn btn-link">Back to Dashboard</a>
                                 </div>
@@ -77,31 +73,31 @@
     <script src="public/assets/js/sb-admin-2.min.js"></script>
 
     <script>
-        // Mendapatkan referensi ke elemen div dengan id "id_card"
-        var idCardDiv = document.getElementById("id_card");
+    // Mendapatkan referensi ke elemen div dengan id "id_card"
+    var idCardDiv = document.getElementById("id_card");
 
-        // Fungsi untuk memuat isi file content.php ke dalam elemen div
-        function loadContent() {
-            // Membuat objek XMLHttpRequest
-            var xhr = new XMLHttpRequest();
+    // Fungsi untuk memuat isi file content.php ke dalam elemen div
+    function loadContent() {
+        // Membuat objek XMLHttpRequest
+        var xhr = new XMLHttpRequest();
 
-            // Menentukan metode dan URL untuk permintaan AJAX
-            xhr.open("GET", "query/rfid.php", true);
+        // Menentukan metode dan URL untuk permintaan AJAX
+        xhr.open("GET", "query/rfid.php", true);
 
-            // Mengatur fungsi penanganan ketika permintaan selesai
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    // Mengisi isi div dengan respon dari content.php
-                    idCardDiv.innerHTML = xhr.responseText;
-                }
-            };
+        // Mengatur fungsi penanganan ketika permintaan selesai
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Mengisi isi div dengan respon dari content.php
+                idCardDiv.innerHTML = xhr.responseText;
+            }
+        };
 
-            // Mengirim permintaan AJAX
-            xhr.send();
-        }
+        // Mengirim permintaan AJAX
+        xhr.send();
+    }
 
-        // Memanggil fungsi loadContent setiap detik
-        setInterval(loadContent, 1000);
+    // Memanggil fungsi loadContent setiap detik
+    setInterval(loadContent, 1000);
     </script>
 </body>
 
