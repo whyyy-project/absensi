@@ -77,9 +77,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact us</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="mobile-view" href="login">Login</a>
+                            </li>
                         </ul>
                         <div class="user_option">
-                            <a href="login.html">
+                            <a href="login">
                                 <img loading="lazy" src="images/user.png" alt="">
                                 <span>
                                     Login
