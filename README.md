@@ -1,4 +1,3 @@
 # absensi
 
-#project absensi
-#jajal neh 
+# project absensi
