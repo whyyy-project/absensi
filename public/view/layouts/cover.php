@@ -140,7 +140,7 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      System
+                      System 
                       <span> 
                         Absensi
                       </span>
