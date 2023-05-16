@@ -51,8 +51,8 @@
         <header class="header_section">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
-                    <a class="navbar-brand" href="index.html">
-                        <img loading="lazy" src="images/Logo1.png" alt="" />
+                    <a class="navbar-brand" href="./">
+                        <img loading="lazy" src="public/images/cover/logo-cover.png" width="150px" alt="logo" />
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -60,36 +60,6 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-<<<<<<< HEAD
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="shop.html">SOP </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="furniture.html"> Furniture </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact us</a>
-              </li>
-            </ul>
-            <div class="user_option">
-              <a href="login">
-                <img src="images/user.png" alt="">
-                <span>
-                  Login
-                </span>
-              </a>
-              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
-=======
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item active">
@@ -134,7 +104,6 @@
                     </div>
 
                 </nav>
->>>>>>> e2a99438998ed0bc7fc21d1f57147a23199004b3
             </div>
         </header>
         <!-- end header section -->
@@ -183,7 +152,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/slide-1.png" alt="">
+                                        <img loading="lazy" src="public/images/cover/slide-1.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +176,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/slide-2.png" alt="">
+                                        <img loading="lazy" src="public/images/cover/slide-2.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +200,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/slide-3.png" alt="">
+                                        <img loading="lazy" src="public/images/cover/slide-3.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +224,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/slide-4.png" alt="">
+                                        <img loading="lazy" src="public/images/cover/slide-4.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -298,114 +267,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      System 
-                      <span> 
-                        Absensi
-                      </span>
-                    </h1>
-                    <p>
-                      Sederhanakan Pencatatan Absensi Sekolah dan Tingkatkan Efisiensi dengan Solusi Yang Inovatif!
-                    </p>
-
-                  </div>
-                </div>
-                <div class="col-md-6 img-container">
-                  <div class="img-box">
-                    <img src="public/images/cover/slide-1.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      Modern 
-                      <span>
-                         & Canggih
-                      </span>
-                    </h1>
-                    <p>
-                      Optimalkan pengelolaan absensi sekolah Anda dengan sistem absensi yang menggunakan teknologi modern dan canggih!
-                    </p>
-                    
-                  </div>
-                </div>
-                <div class="col-md-6 img-container">
-                  <div class="img-box">
-                    <img src="public/images/cover/slide-2.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      Easy  
-                      <span> 
-                        & Fun
-                      </span>
-                    </h1>
-                    <p>
-                      Absen menggunakan Kartu Pelajar lebih praktis dan menyingkat waktu, serta memberi pengalaman menyenangkan bagi Siswa!
-                    </p>
-                    
-                  </div>
-                </div>
-                <div class="col-md-6 img-container">
-                  <div class="img-box">
-                    <img src="public/images/cover/slide-3.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      Sekolah 
-                      <span>
-                        Modern 2.0
-                      </span>
-                    </h1>
-                    <p>
-                      Memajukan Pendidikan modern 2.0 dengan Teknologi Revolusioner & mendukung Efesiensi Pengarsipan Absen Siswa!
-                    </p>
-                    
-                  </div>
-                </div>
-                <div class="col-md-6 img-container">
-                  <div class="img-box">
-                    <img src="public/images/cover/slide-4.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
->>>>>>> e2a99438998ed0bc7fc21d1f57147a23199004b3
     </section>
 
     <!-- end about section -->
@@ -578,148 +439,38 @@
 
     <!-- end trending section -->
 
-    <!-- discount section -->
+      <!-- discount section -->
 
-    <section class="discount_section  layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <h2>
-                            The Latest Collection
-                        </h2>
-                        <h2 class="main_heading">
-                            50% DISCOUNT
-                        </h2>
+  <section class="discount_section  layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h2>
+              The Latest Collection
+            </h2>
+            <h2 class="main_heading">
+              50% DISCOUNT
+            </h2>
 
-                        <div class="">
-                            <a href="">
-                                Buy Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img-box">
-                        <img loading="lazy" src="images/discount-img.png" alt="">
-                    </div>
-                </div>
+            <div class="">
+              <a href="">
+                Buy Now
+              </a>
             </div>
+          </div>
         </div>
-        <<<<<<< HEAD=======</div>
-            <div class="container">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            System
-                                            <span>
-                                                Absensi
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            Sederhanakan Pencatatan Absensi Sekolah dan Tingkatkan Efisiensi dengan
-                                            Solusi Yang Inovatif!
-                                        </p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6 img-container">
-                                    <div class="img-box">
-                                        <img src="images/slide-1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Modern
-                                            <span>
-                                                & Canggih
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            Optimalkan pengelolaan absensi sekolah Anda dengan sistem absensi yang
-                                            menggunakan teknologi modern dan canggih!
-                                        </p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6 img-container">
-                                    <div class="img-box">
-                                        <img src="images/slide-2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Easy
-                                            <span>
-                                                & Fun
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            Absen menggunakan Kartu Pelajar lebih praktis dan menyingkat waktu, serta
-                                            memberi pengalaman menyenangkan bagi Siswa!
-                                        </p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6 img-container">
-                                    <div class="img-box">
-                                        <img src="images/slide-3.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Sekolah
-                                            <span>
-                                                Modern 2.0
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            Memajukan Pendidikan modern 2.0 dengan Teknologi Revolusioner & mendukung
-                                            Efesiensi Pengarsipan Absen Siswa!
-                                        </p>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6 img-container">
-                                    <div class="img-box">
-                                        <img src="images/slide-4.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            >>>>>>> 7bfb32c32c283a33197543224787c78a06d83baf
-    </section>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/discount-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-    <!-- end discount section -->
+  <!-- end discount section -->
 
     <!-- brand section -->
 
