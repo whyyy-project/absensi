@@ -11,7 +11,7 @@ if (empty($_SESSION['level'])) {
                 include "public/view/layouts/scan.php";
                 break;
             case 'login':
-                include "public/view/layouts/login.php";
+                include "./public/view/layouts/login.php";
                 break;
             case 'cover':
                 include "public/view/layouts/cover.php";
