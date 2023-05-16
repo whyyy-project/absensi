@@ -281,7 +281,8 @@ a:focus {
 }
 
 .slider_section .detail-box h1 span {
-  font-size: 5rem;
+  white-space: pre-line;
+  font-size: 3.5rem;
   color: #252525;
 }
 

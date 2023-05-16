@@ -141,21 +141,14 @@
                   <div class="detail-box">
                     <h1>
                       System
-                      <span> <br>
+                      <span> 
                         Absensi
                       </span>
                     </h1>
                     <p>
                       Sederhanakan Pencatatan Absensi Sekolah dan Tingkatkan Efisiensi dengan Solusi Yang Inovatif!
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
-                      </a>
-                    </div>
+
                   </div>
                 </div>
                 <div class="col-md-6 img-container">
@@ -170,7 +163,7 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      Modern <br>
+                      Modern 
                       <span>
                          & Canggih
                       </span>
@@ -178,14 +171,7 @@
                     <p>
                       Optimalkan pengelolaan absensi sekolah Anda dengan sistem absensi yang menggunakan teknologi modern dan canggih!
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
-                      </a>
-                    </div>
+                    
                   </div>
                 </div>
                 <div class="col-md-6 img-container">
@@ -201,21 +187,14 @@
                   <div class="detail-box">
                     <h1>
                       Easy  
-                      <span> <br>
+                      <span> 
                         & Fun
                       </span>
                     </h1>
                     <p>
                       Absen menggunakan Kartu Pelajar lebih praktis dan menyingkat waktu, serta memberi pengalaman menyenangkan bagi Siswa!
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
-                      </a>
-                    </div>
+                    
                   </div>
                 </div>
                 <div class="col-md-6 img-container">
@@ -230,7 +209,7 @@
                 <div class="col-md-6">
                   <div class="detail-box">
                     <h1>
-                      Sekolah <br>
+                      Sekolah 
                       <span>
                         Modern 2.0
                       </span>
@@ -238,14 +217,7 @@
                     <p>
                       Memajukan Pendidikan modern 2.0 dengan Teknologi Revolusioner & mendukung Efesiensi Pengarsipan Absen Siswa!
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
-                      </a>
-                    </div>
+                    
                   </div>
                 </div>
                 <div class="col-md-6 img-container">
