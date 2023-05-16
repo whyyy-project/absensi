@@ -32,16 +32,16 @@
     <link href="public/assets/css/responsive.css" rel="stylesheet" />
     <link rel="shortcut icon" href="public/assets/favicon.ico" />
     <style>
-    #mobile-view {
-        display: none;
-    }
-
-    @media (max-width: 992px) {
         #mobile-view {
-            display: flex;
-            justify-content: center;
+            display: none;
         }
-    }
+
+        @media (max-width: 992px) {
+            #mobile-view {
+                display: flex;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
@@ -113,7 +113,7 @@
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="/scan">
+                <a href="./scan">
                     <img loading="lazy" src="public/assets/images/play.png" alt="">
                 </a>
             </div>
@@ -442,38 +442,38 @@
 
     <!-- end trending section -->
 
-      <!-- discount section -->
+    <!-- discount section -->
 
-  <section class="discount_section  layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h2>
-              The Latest Collection
-            </h2>
-            <h2 class="main_heading">
-              50% DISCOUNT
-            </h2>
+    <section class="discount_section  layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <h2>
+                            The Latest Collection
+                        </h2>
+                        <h2 class="main_heading">
+                            50% DISCOUNT
+                        </h2>
 
-            <div class="">
-              <a href="">
-                Buy Now
-              </a>
+                        <div class="">
+                            <a href="">
+                                Buy Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="images/discount-img.png" alt="">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/discount-img.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- end discount section -->
+    <!-- end discount section -->
 
     <!-- brand section -->
 
@@ -827,44 +827,44 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
     </script>
     <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: [],
-        autoplay: true,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            420: {
-                items: 2
-            },
-            1000: {
-                items: 5
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: [],
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                420: {
+                    items: 2
+                },
+                1000: {
+                    items: 5
+                }
             }
-        }
 
-    });
+        });
     </script>
     <script>
-    var nav = $("#navbarSupportedContent");
-    var btn = $(".custom_menu-btn");
-    btn.click
-    btn.click(function(e) {
+        var nav = $("#navbarSupportedContent");
+        var btn = $(".custom_menu-btn");
+        btn.click
+        btn.click(function (e) {
 
-        e.preventDefault();
-        nav.toggleClass("lg_nav-toggle");
-        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-    });
+            e.preventDefault();
+            nav.toggleClass("lg_nav-toggle");
+            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+        });
     </script>
     <script>
-    $('.carousel').on('slid.bs.carousel', function() {
-        $(".indicator-2 li").removeClass("active");
-        indicators = $(".carousel-indicators li.active").data("slide-to");
-        a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-    })
+        $('.carousel').on('slid.bs.carousel', function () {
+            $(".indicator-2 li").removeClass("active");
+            indicators = $(".carousel-indicators li.active").data("slide-to");
+            a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+        })
     </script>
 
 </body>
