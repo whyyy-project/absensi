@@ -8,7 +8,7 @@ if (empty($_SESSION['level'])) {
         $hlm = $_REQUEST['hlm'];
         switch ($hlm) {
             case 'scan':
-                include "public/view/layouts/absensi.php";
+                include "public/view/layouts/scan.php";
                 break;
             case 'login':
                 include "public/view/layouts/login.php";
