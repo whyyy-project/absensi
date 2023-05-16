@@ -78,7 +78,7 @@
               </li>
             </ul>
             <div class="user_option">
-              <a href="login.html">
+              <a href="login">
                 <img src="images/user.png" alt="">
                 <span>
                   Login
@@ -153,7 +153,7 @@
                 </div>
                 <div class="col-md-6 img-container">
                   <div class="img-box">
-                    <img src="images/slide-1.png" alt="">
+                    <img src="public/images/cover/slide-1.png" alt="">
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@
                 </div>
                 <div class="col-md-6 img-container">
                   <div class="img-box">
-                    <img src="images/slide-2.png" alt="">
+                    <img src="public/images/cover/slide-2.png" alt="">
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@
                 </div>
                 <div class="col-md-6 img-container">
                   <div class="img-box">
-                    <img src="images/slide-3.png" alt="">
+                    <img src="public/images/cover/slide-3.png" alt="">
                   </div>
                 </div>
               </div>
@@ -222,7 +222,7 @@
                 </div>
                 <div class="col-md-6 img-container">
                   <div class="img-box">
-                    <img src="images/slide-4.png" alt="">
+                    <img src="public/images/cover/slide-4.png" alt="">
                   </div>
                 </div>
               </div>
