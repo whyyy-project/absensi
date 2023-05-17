@@ -32,16 +32,16 @@
     <link href="public/assets/css/responsive.css" rel="stylesheet" />
     <link rel="shortcut icon" href="public/assets/favicon.ico" />
     <style>
-        #mobile-view {
-            display: none;
-        }
+    #mobile-view {
+        display: none;
+    }
 
-        @media (max-width: 992px) {
-            #mobile-view {
-                display: flex;
-                justify-content: center;
-            }
+    @media (max-width: 992px) {
+        #mobile-view {
+            display: flex;
+            justify-content: center;
         }
+    }
     </style>
 </head>
 
@@ -82,15 +82,12 @@
                             </li>
                         </ul>
                         <div class="user_option">
-                            <a href="login">
+                            <a href="?hlm=login">
                                 <img loading="lazy" src="images/user.png" alt="">
                                 <span>
                                     Login
                                 </span>
                             </a>
-                            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                            </form>
                         </div>
                     </div>
                     <div>
@@ -113,7 +110,7 @@
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="./scan">
+                <a href="?hlm=scan">
                     <img loading="lazy" src="public/assets/images/play.png" alt="">
                 </a>
             </div>
@@ -249,15 +246,23 @@
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>
-                                Tentang Kami 
+                                Tentang Kami
                             </h2>
 
                         </div>
                         <p style="text-align: justify;">
-                        Temukan Potensi Terbaikmu di Sekolah Kami! Kami adalah sekolah yang berdedikasi untuk memberikan pendidikan yang inspiratif,
-                         berkualitas, dan inklusif. Dengan staf pengajar yang berpengalaman dan peduli, kami berkomitmen untuk mencetak generasi muda yang cerdas, kreatif, dan berintegritas.
-                        Kurikulum kami didesain untuk mengembangkan potensi siswa secara holistik, baik dalam bidang akademik maupun karakter. Fasilitas modern kami menciptakan lingkungan belajar yang kondusif, memberikan siswa pengalaman belajar yang nyaman dan menarik. Kami juga menawarkan beragam kegiatan ekstrakurikuler yang memperkaya pengalaman siswa dalam bidang seni, olahraga, dan kegiatan sosial. Bergabunglah dengan kami dan jadilah bagian dari komunitas yang mendukung perkembangan penuh potensi siswa. 
-                        Daftarkan dirimu sekarang dan mulailah perjalanan menuju masa depan yang sukses!                        </p></p>
+                            Temukan Potensi Terbaikmu di Sekolah Kami! Kami adalah sekolah yang berdedikasi untuk
+                            memberikan pendidikan yang inspiratif,
+                            berkualitas, dan inklusif. Dengan staf pengajar yang berpengalaman dan peduli, kami
+                            berkomitmen untuk mencetak generasi muda yang cerdas, kreatif, dan berintegritas.
+                            Kurikulum kami didesain untuk mengembangkan potensi siswa secara holistik, baik dalam bidang
+                            akademik maupun karakter. Fasilitas modern kami menciptakan lingkungan belajar yang
+                            kondusif, memberikan siswa pengalaman belajar yang nyaman dan menarik. Kami juga menawarkan
+                            beragam kegiatan ekstrakurikuler yang memperkaya pengalaman siswa dalam bidang seni,
+                            olahraga, dan kegiatan sosial. Bergabunglah dengan kami dan jadilah bagian dari komunitas
+                            yang mendukung perkembangan penuh potensi siswa.
+                            Daftarkan dirimu sekarang dan mulailah perjalanan menuju masa depan yang sukses! </p>
+                        </p>
                         <a href="">
                             Read More
                         </a>
@@ -353,7 +358,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/telat1.jpg" style="width: 300px; " alt="">
+                                        <img loading="lazy" src="public/assets/images/telat1.jpg" style="width: 300px; "
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -362,7 +368,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/telat2.jpg" style="width: 300px;" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat2.jpg" style="width: 300px;"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -372,7 +379,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/telat3.jpg" style="width: 300px;" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat3.jpg" style="width: 300px;"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -381,7 +389,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/telat4.jpg" style="width: 300px;" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat4.jpg" style="width: 300px;"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -435,7 +444,7 @@
         <div class="container">
             <div class="heading_container text-center">
                 <h2>
-                    Top 4 Siswa Terpagi 
+                    Top 4 Siswa Terpagi
                     <p>30 hari terakhir</p>
                 </h2>
             </div>
@@ -519,7 +528,7 @@
         <div class="container ">
             <div class="heading_container">
                 <h2 class="">
-                    Hubungi Kami 
+                    Hubungi Kami
                 </h2>
             </div>
 
@@ -782,44 +791,44 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
     </script>
     <script type="text/javascript">
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            navText: [],
-            autoplay: true,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                420: {
-                    items: 2
-                },
-                1000: {
-                    items: 5
-                }
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: [],
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            420: {
+                items: 2
+            },
+            1000: {
+                items: 5
             }
+        }
 
-        });
+    });
     </script>
     <script>
-        var nav = $("#navbarSupportedContent");
-        var btn = $(".custom_menu-btn");
-        btn.click
-        btn.click(function (e) {
+    var nav = $("#navbarSupportedContent");
+    var btn = $(".custom_menu-btn");
+    btn.click
+    btn.click(function(e) {
 
-            e.preventDefault();
-            nav.toggleClass("lg_nav-toggle");
-            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-        });
+        e.preventDefault();
+        nav.toggleClass("lg_nav-toggle");
+        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    });
     </script>
     <script>
-        $('.carousel').on('slid.bs.carousel', function () {
-            $(".indicator-2 li").removeClass("active");
-            indicators = $(".carousel-indicators li.active").data("slide-to");
-            a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-        })
+    $('.carousel').on('slid.bs.carousel', function() {
+        $(".indicator-2 li").removeClass("active");
+        indicators = $(".carousel-indicators li.active").data("slide-to");
+        a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+    })
     </script>
 
 </body>
