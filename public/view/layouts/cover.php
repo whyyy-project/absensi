@@ -249,15 +249,15 @@
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>
-                                About Us
+                                Tentang Kami 
                             </h2>
 
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam
-                        </p>
+                        <p style="text-align: justify;">
+                        Temukan Potensi Terbaikmu di Sekolah Kami! Kami adalah sekolah yang berdedikasi untuk memberikan pendidikan yang inspiratif,
+                         berkualitas, dan inklusif. Dengan staf pengajar yang berpengalaman dan peduli, kami berkomitmen untuk mencetak generasi muda yang cerdas, kreatif, dan berintegritas.
+                        Kurikulum kami didesain untuk mengembangkan potensi siswa secara holistik, baik dalam bidang akademik maupun karakter. Fasilitas modern kami menciptakan lingkungan belajar yang kondusif, memberikan siswa pengalaman belajar yang nyaman dan menarik. Kami juga menawarkan beragam kegiatan ekstrakurikuler yang memperkaya pengalaman siswa dalam bidang seni, olahraga, dan kegiatan sosial. Bergabunglah dengan kami dan jadilah bagian dari komunitas yang mendukung perkembangan penuh potensi siswa. 
+                        Daftarkan dirimu sekarang dan mulailah perjalanan menuju masa depan yang sukses!                        </p></p>
                         <a href="">
                             Read More
                         </a>
@@ -284,7 +284,7 @@
                         <div class="detail-box">
                             <div class="heading_container">
                                 <h2>
-                                    Trending Categories
+                                    Sering Terlambat Bulan ini
                                 </h2>
                             </div>
                             <div class="tab_container">
@@ -298,7 +298,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Chairs
+                                            Yoga
                                         </h5>
                                     </div>
                                 </div>
@@ -312,7 +312,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Tables
+                                            Rina
                                         </h5>
                                     </div>
                                 </div>
@@ -326,7 +326,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Bads
+                                            Yogi
                                         </h5>
                                     </div>
                                 </div>
@@ -340,7 +340,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Furnitures
+                                            Rani
                                         </h5>
                                     </div>
                                 </div>
@@ -353,18 +353,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-1.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-4.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat1.jpg" style="width: 300px; " alt="">
                                     </div>
                                 </div>
                             </div>
@@ -373,19 +362,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-4.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-1.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat2.jpg" style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -395,18 +372,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-4.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat3.jpg" style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -415,19 +381,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-1.jpg" alt="">
-                                    </div>
-
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-4.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="public/assets/images/t-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat4.jpg" style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -564,7 +518,7 @@
         <div class="container ">
             <div class="heading_container">
                 <h2 class="">
-                    Contact Us
+                    Hubungi Kami 
                 </h2>
             </div>
 
