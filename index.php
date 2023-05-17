@@ -1,7 +1,10 @@
 <?php
+//session untuk login
 session_start();
-session_destroy();
-// $_SESSION['level'] = "guru";
+// session untuk logout
+// session_destroy();
+// contoh session
+$_SESSION['level'] = "guru";
 include "query/koneksi.php";
 if (empty($_SESSION['level'])) {
     if (isset($_REQUEST['hlm'])) {
@@ -33,9 +36,6 @@ if (isset($_SESSION['level']) == "guru") {
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];
         switch ($hlm) {
-            case 'absensi':
-                include "./public/view/layouts/absensi.php";
-                break;
             case 'guru':
                 include "./public/view/layouts/guru/dashboard.php";
                 break;
