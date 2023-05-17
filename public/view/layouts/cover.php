@@ -433,9 +433,10 @@
 
     <section class="brand_section">
         <div class="container">
-            <div class="heading_container">
+            <div class="heading_container text-center">
                 <h2>
-                    Featured Brands
+                    Top 4 Siswa Terpagi 
+                    <p>30 hari terakhir</p>
                 </h2>
             </div>
             <div class="brand_container layout_padding2">
@@ -528,20 +529,20 @@
                 <div class="col-md-6">
                     <form action="">
                         <div>
-                            <input type="text" placeholder="Name" />
+                            <input type="text" placeholder="Nama" />
                         </div>
                         <div>
                             <input type="email" placeholder="Email" />
                         </div>
                         <div>
-                            <input type="text" placeholder="Phone" />
+                            <input type="text" placeholder="No Telepon" />
                         </div>
                         <div>
-                            <input type="text" class="message-box" placeholder="Message" />
+                            <input type="text" class="message-box" placeholder="Tulis Pesan" />
                         </div>
                         <div class="d-flex ">
                             <button>
-                                SEND
+                                KIRIM
                             </button>
                         </div>
                     </form>
