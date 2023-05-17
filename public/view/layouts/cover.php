@@ -249,15 +249,15 @@
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>
-                                About Us
+                                Tentang Kami 
                             </h2>
 
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam
-                        </p>
+                        <p style="text-align: justify;">
+                        Temukan Potensi Terbaikmu di Sekolah Kami! Kami adalah sekolah yang berdedikasi untuk memberikan pendidikan yang inspiratif,
+                         berkualitas, dan inklusif. Dengan staf pengajar yang berpengalaman dan peduli, kami berkomitmen untuk mencetak generasi muda yang cerdas, kreatif, dan berintegritas.
+                        Kurikulum kami didesain untuk mengembangkan potensi siswa secara holistik, baik dalam bidang akademik maupun karakter. Fasilitas modern kami menciptakan lingkungan belajar yang kondusif, memberikan siswa pengalaman belajar yang nyaman dan menarik. Kami juga menawarkan beragam kegiatan ekstrakurikuler yang memperkaya pengalaman siswa dalam bidang seni, olahraga, dan kegiatan sosial. Bergabunglah dengan kami dan jadilah bagian dari komunitas yang mendukung perkembangan penuh potensi siswa. 
+                        Daftarkan dirimu sekarang dan mulailah perjalanan menuju masa depan yang sukses!                        </p></p>
                         <a href="">
                             Read More
                         </a>
@@ -265,7 +265,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img loading="lazy" src="images/about-img.png" alt="">
+                        <img loading="lazy" src="public/assets/images/about-img.png" alt="">
                     </div>
                 </div>
             </div>
@@ -284,7 +284,7 @@
                         <div class="detail-box">
                             <div class="heading_container">
                                 <h2>
-                                    Trending Categories
+                                    Sering Terlambat Bulan ini
                                 </h2>
                             </div>
                             <div class="tab_container">
@@ -298,7 +298,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Chairs
+                                            Yoga
                                         </h5>
                                     </div>
                                 </div>
@@ -312,7 +312,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Tables
+                                            Rina
                                         </h5>
                                     </div>
                                 </div>
@@ -326,7 +326,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Bads
+                                            Yogi
                                         </h5>
                                     </div>
                                 </div>
@@ -340,7 +340,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Furnitures
+                                            Rani
                                         </h5>
                                     </div>
                                 </div>
@@ -353,18 +353,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/t-1.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-4.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat1.jpg" style="width: 300px; " alt="">
                                     </div>
                                 </div>
                             </div>
@@ -373,19 +362,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-4.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-1.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat2.jpg" style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -395,18 +372,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/t-4.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat3.jpg" style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -415,19 +381,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="images/t-1.jpg" alt="">
-                                    </div>
-
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-4.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="box b-2">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-3.jpg" alt="">
-                                    </div>
-                                    <div class="img-box">
-                                        <img loading="lazy" src="images/t-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/telat4.jpg" style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +419,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img src="images/discount-img.png" alt="">
+                        <img src="public/assets/images/discount-img.png" alt="">
                     </div>
                 </div>
             </div>
@@ -479,9 +433,10 @@
 
     <section class="brand_section">
         <div class="container">
-            <div class="heading_container">
+            <div class="heading_container text-center">
                 <h2>
-                    Featured Brands
+                    Top 4 Siswa Terpagi 
+                    <p>30 hari terakhir</p>
                 </h2>
             </div>
             <div class="brand_container layout_padding2">
@@ -493,7 +448,7 @@
                             </h5>
                         </div>
                         <div class="img-box">
-                            <img loading="lazy" src="images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
                         </div>
                         <div class="detail-box">
                             <h6 class="price">
@@ -508,7 +463,7 @@
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img loading="lazy" src="images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
                         </div>
                         <div class="detail-box">
                             <h6 class="price">
@@ -523,7 +478,7 @@
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img loading="lazy" src="images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
                         </div>
                         <div class="detail-box">
                             <h6 class="price">
@@ -538,7 +493,7 @@
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img loading="lazy" src="images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
                         </div>
                         <div class="detail-box">
                             <h6 class="price">
@@ -564,7 +519,7 @@
         <div class="container ">
             <div class="heading_container">
                 <h2 class="">
-                    Contact Us
+                    Hubungi Kami 
                 </h2>
             </div>
 
@@ -574,20 +529,20 @@
                 <div class="col-md-6">
                     <form action="">
                         <div>
-                            <input type="text" placeholder="Name" />
+                            <input type="text" placeholder="Nama" />
                         </div>
                         <div>
                             <input type="email" placeholder="Email" />
                         </div>
                         <div>
-                            <input type="text" placeholder="Phone" />
+                            <input type="text" placeholder="No Telepon" />
                         </div>
                         <div>
-                            <input type="text" class="message-box" placeholder="Message" />
+                            <input type="text" class="message-box" placeholder="Tulis Pesan" />
                         </div>
                         <div class="d-flex ">
                             <button>
-                                SEND
+                                KIRIM
                             </button>
                         </div>
                     </form>
@@ -623,7 +578,7 @@
                 <div class="client_box b-1">
                     <div class="client-id">
                         <div class="img-box">
-                            <img loading="lazy" src="images/client-1.png" alt="" />
+                            <img loading="lazy" src="public/assets/images/client-1.png" alt="" />
                         </div>
                         <div class="name">
                             <h5>
@@ -649,7 +604,7 @@
                 <div class="client_box b-2">
                     <div class="client-id">
                         <div class="img-box">
-                            <img loading="lazy" src="images/client-2.png" alt="" />
+                            <img loading="lazy" src="public/assets/images/client-2.png" alt="" />
                         </div>
                         <div class="name">
                             <h5>
@@ -696,7 +651,7 @@
                         </h5>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="images/location-white.png" width="18px" alt="">
+                                <img loading="lazy" src="public/assets/images/location-white.png" width="18px" alt="">
                             </div>
                             <p>
                                 Address
@@ -704,7 +659,7 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="images/telephone-white.png" width="12px" alt="">
+                                <img loading="lazy" src="public/assets/images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
                                 +01 1234567890
@@ -712,7 +667,7 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="images/envelope-white.png" width="18px" alt="">
+                                <img loading="lazy" src="public/assets/images/envelope-white.png" width="18px" alt="">
                             </div>
                             <p>
                                 demo@gmail.com
@@ -740,12 +695,12 @@
                             <div>
                                 <a href="">
                                     <div class="insta-box b-1">
-                                        <img loading="lazy" src="images/i-1.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/i-1.jpg" alt="">
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="insta-box b-2">
-                                        <img loading="lazy" src="images/i-2.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/i-2.jpg" alt="">
                                     </div>
                                 </a>
                             </div>
@@ -753,24 +708,24 @@
                             <div>
                                 <a href="">
                                     <div class="insta-box b-3">
-                                        <img loading="lazy" src="images/i-3.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/i-3.jpg" alt="">
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="insta-box b-4">
-                                        <img loading="lazy" src="images/i-4.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/i-4.jpg" alt="">
                                     </div>
                                 </a>
                             </div>
                             <div>
                                 <a href="">
                                     <div class="insta-box b-3">
-                                        <img loading="lazy" src="images/i-5.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/i-5.jpg" alt="">
                                     </div>
                                 </a>
                                 <a href="">
                                     <div class="insta-box b-4">
-                                        <img loading="lazy" src="images/i-6.jpg" alt="">
+                                        <img loading="lazy" src="public/assets/images/i-6.jpg" alt="">
                                     </div>
                                 </a>
                             </div>
@@ -790,16 +745,16 @@
                         </form>
                         <div class="social_box">
                             <a href="">
-                                <img loading="lazy" src="images/fb.png" alt="">
+                                <img loading="lazy" src="public/assets/images/fb.png" alt="">
                             </a>
                             <a href="">
-                                <img loading="lazy" src="images/twitter.png" alt="">
+                                <img loading="lazy" src="public/assets/images/twitter.png" alt="">
                             </a>
                             <a href="">
-                                <img loading="lazy" src="images/linkedin.png" alt="">
+                                <img loading="lazy" src="public/assets/images/linkedin.png" alt="">
                             </a>
                             <a href="">
-                                <img loading="lazy" src="images/youtube.png" alt="">
+                                <img loading="lazy" src="public/assets/images/youtube.png" alt="">
                             </a>
                         </div>
                     </div>
