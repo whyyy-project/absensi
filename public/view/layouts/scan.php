@@ -23,7 +23,7 @@
 
     <style>
         .bg-scan-image {
-            background-image: url("public/images/scan.jpg");
+            background-image: url("public/images/scan_image.jpg");
             background-position: center;
             background-size: cover;
         }
