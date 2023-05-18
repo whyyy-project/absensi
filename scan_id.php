@@ -9,7 +9,10 @@ $getID = htmlspecialchars($_GET['id']);
 $getMesin = htmlentities($_GET['m']);
 $getStat = htmlspecialchars($_GET['stat']);
 $getToken = htmlspecialchars($_GET['token']);
-
+if ($getToken != "12345678") {
+    echo "token salah";
+    return;
+}
 // setup waktu
 $waktu = date('H:i:s');
 $tgl = date('Y-m-d');
@@ -29,7 +32,8 @@ if (mysqli_num_rows($data_siswa) != 1) {
 }
 
 $id_siswa = $result['id_siswa'];
-$delete = mysqli_query($db, "DELETE FROM `temp_rfid` WHERE `temp_rfid`.`jenis_scan` = 'absen';");
+// menghapus temporary dari mesin sebelumnya
+$delete = mysqli_query($db, "DELETE FROM `temp_rfid` WHERE `temp_rfid`.`kode_mesin` = '$getMesin';");
 // menambahkan ke temporary rfid
 $insert = mysqli_query($db, "INSERT INTO `temp_rfid` (`id_temp`, `rfid`, `jenis_scan`, `kode_mesin`, `last_use`)
 VALUES (NULL, '$getID', '$getStat', '$getMesin', '$waktu')");
