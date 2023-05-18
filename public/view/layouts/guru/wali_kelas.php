@@ -9,9 +9,9 @@ include "public/view/partials/guru/modals.php";
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <h1 class="h3 mb-0 text-gray-800">Wali Kelas</h1>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Download Abs</a>
+                class="fas fa-download fa-sm text-white-50"></i> Download Absensi</a>
     </div>
     <!-- end page heading -->
 
@@ -103,7 +103,7 @@ include "public/view/partials/guru/modals.php";
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Absensi Mingguan</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Absensi Siswa</h6>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -140,7 +140,7 @@ include "public/view/partials/guru/modals.php";
                                     <th>Masuk</th>
                                     <th>Pulang</th>
                                     <th>Keterangan</th>
-                                    <th>Edith</th>
+                                    <th>Edit</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -150,39 +150,39 @@ include "public/view/partials/guru/modals.php";
                                     <td>06:45</td>
                                     <td>13:00</td>
                                     <td>H</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edith</button</td>
+                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
+                                    <td>2</td>
+                                    <td>Naruto</td>
+                                    <td>07:45</td>
+                                    <td>13:010</td>
+                                    <td>H</td>
+                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>$86,000</td>
+                                    <td>3</td>
+                                    <td>Zoro</td>
+                                    <td>06:47</td>
+                                    <td>13:30</td>
+                                    <td>H</td>
+                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                    <td>22</td>
-                                    <td>2012/03/29</td>
-                                    <td>$433,060</td>
+                                    <td>4</td>
+                                    <td>Todoroki</td>
+                                    <td>06:55</td>
+                                    <td>13:50</td>
+                                    <td>H</td>
+                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
-                                    <td>Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td>$162,700</td>
+                                    <td>5</td>
+                                    <td>Sinchan</td>
+                                    <td>06:45</td>
+                                    <td>12:51</td>
+                                    <td>H</td>
+                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
                                     <td>Brielle Williamson</td>
