@@ -39,6 +39,9 @@ if (isset($_SESSION['level']) == "guru") {
             case 'guru':
                 include "./public/view/layouts/guru/dashboard.php";
                 break;
+            case 'wali':
+                include "./public/view/layouts/guru/wali_kelas.php";
+                break;
             case 'login':
                 include "./public/view/layouts/login.php";
                 break;

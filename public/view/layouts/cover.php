@@ -270,7 +270,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img loading="lazy" src="public/assets/images/about-img.png" alt="">
+                        <img loading="lazy" src="public/images/cover/tentang.jpg" alt="">
                     </div>
                 </div>
             </div>
