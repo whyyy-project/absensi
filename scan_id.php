@@ -1,9 +1,14 @@
 <?php
+// menambahkan koneksi db dan menerima data
 include "query/koneksi.php";
+if (empty($_GET['id'] && $_GET['m'] && $_GET['stat'] && $_GET['token'])) {
+    echo "hekel";
+    return;
+}
 $getID = htmlspecialchars($_GET['id']);
 $getMesin = htmlentities($_GET['m']);
 $getStat = htmlspecialchars($_GET['stat']);
-
+$getToken = htmlspecialchars($_GET['token']);
 
 // setup waktu
 $waktu = date('H:i:s');
