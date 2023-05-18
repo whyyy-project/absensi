@@ -27,6 +27,24 @@
             background-position: center;
             background-size: cover;
         }
+
+        .bg-scan2-image {
+            background-image: url("public/images/scan_image2.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .bg-scan3-image {
+            background-image: url("public/images/scan_image3.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .bg-scan4-image {
+            background-image: url("public/images/logo-scan.png");
+            background-position: center;
+            background-size: cover;
+        }
     </style>
 
 </head>
@@ -42,20 +60,9 @@
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row text-center">
-                            <div class="col-lg-6 d-none d-lg-block bg-scan-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">SCAN ABSENSI</h1>
-                                    </div>
-                                    <div id="id_card"> </div>
-                                    <hr>
-                                    <a href="./" class="btn btn-link">Back to Dashboard</a>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- content card -->
+                        <div id="id_card"> </div>
+                        <!-- end content card -->
                     </div>
                 </div>
             </div>

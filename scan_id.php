@@ -18,8 +18,10 @@ $waktu = date('H:i:s');
 $tgl = date('Y-m-d');
 if ($waktu > "07:00:00") {
     $ket = "Terlambat";
+    $ket_a = "T";
 } else {
     $ket = "Tepat Waktu";
+    $ket_a = "H";
 }
 
 // mencari id siswa
@@ -46,7 +48,7 @@ if ($row_absen < 1) {
     // masuk data baru
     $insert_absen = mysqli_query($db, "INSERT INTO `tb_absen_siswa`
 (`id_absen_siswa`, `id_siswa`, `tgl`, `masuk`, `keterangan_absen`, `status_absen`, `ket_a`)
-VALUES (NULL, '$id_siswa', '2023-05-18', '$waktu', 'Masuk', '$ket', 'H');");
+VALUES (NULL, '$id_siswa', '2023-05-18', '$waktu', 'Masuk', '$ket', '$ket_a');");
     echo "buat baru";
     return;
 }
@@ -66,7 +68,7 @@ if ($absen_terbaru['tgl'] == $tgl && $tempo <= 600) {
 // update pulang
 if ($absen_terbaru['tgl'] == $tgl && $tempo >= 600) {
     $id_absen = $absen_terbaru['id_absen_siswa'];
-    $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu'
+    $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu', `status_absen` ='Selamat Jalan', `keterangan_absen` = 'Pulang'
     WHERE `tb_absen_siswa`.`id_absen_siswa` = '$id_absen' ");
     echo "pulang";
     return;
