@@ -453,18 +453,15 @@
                     <a href="">
                         <div class="new">
                             <h5>
-                                New
+                                Best!
                             </h5>
                         </div>
                         <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/telat1.jpg" alt="">
                         </div>
                         <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
                             <h6>
-                                Chair
+                                Yoga
                             </h6>
                         </div>
                     </a>
@@ -472,14 +469,11 @@
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/telat2.jpg" alt="">
                         </div>
                         <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
                             <h6>
-                                Chair
+                                Rina
                             </h6>
                         </div>
                     </a>
@@ -487,14 +481,11 @@
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/telat3.jpg" alt="">
                         </div>
                         <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
                             <h6>
-                                Chair
+                                Yogi
                             </h6>
                         </div>
                     </a>
@@ -502,22 +493,16 @@
                 <div class="box">
                     <a href="">
                         <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
+                            <img loading="lazy" src="public/assets/images/telat4.jpg" alt="">
                         </div>
                         <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
                             <h6>
-                                Chair
+                                Rani
                             </h6>
                         </div>
                     </a>
                 </div>
             </div>
-            <a href="" class="brand-btn">
-                See More
-            </a>
         </div>
     </section>
 
@@ -571,77 +556,6 @@
     </section>
 
     <!-- end contact section -->
-
-    <!-- client section -->
-    <section class="client_section layout_padding-bottom">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Testimonial
-                </h2>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="client_container layout_padding2">
-                <div class="client_box b-1">
-                    <div class="client-id">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/client-1.png" alt="" />
-                        </div>
-                        <div class="name">
-                            <h5>
-                                Magna
-                            </h5>
-                            <p>
-                                Consectetur adipiscing
-                            </p>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
-                        </p>
-                        <div>
-                            <div class="arrow_img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="client_box b-2">
-                    <div class="client-id">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/client-2.png" alt="" />
-                        </div>
-                        <div class="name">
-                            <h5>
-                                Aliqua
-                            </h5>
-                            <p>
-                                Consectetur adipiscing
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
-                        </p>
-                        <div>
-                            <div class="arrow_img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end client section -->
 
     <!-- info section -->
     <section class="info_section layout_padding2">

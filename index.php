@@ -2,9 +2,9 @@
 //session untuk login
 session_start();
 // session untuk logout
-// session_destroy();
+session_destroy();
 // contoh session
-$_SESSION['level'] = "admin";
+// $_SESSION['level'] = "admin";
 include "query/koneksi.php";
 if (empty($_SESSION['level'])) {
     if (isset($_REQUEST['hlm'])) {
