@@ -24,7 +24,7 @@ if ($waktu > "07:00:00") {
     $ket_a = "H";
 }
 
-// mencari id siswa
+// mencari id siswanya
 $data_siswa = mysqli_query($db, "SELECT * FROM `tb_siswa`WHERE uuid = '$getID'");
 $result = mysqli_fetch_assoc($data_siswa);
 if (mysqli_num_rows($data_siswa) < 1) {
