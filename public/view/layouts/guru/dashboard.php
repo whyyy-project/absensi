@@ -24,10 +24,10 @@ include "public/view/partials/guru/modals.php";
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Jumlah Siswa</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">40,000</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">4000 </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -40,11 +40,11 @@ include "public/view/partials/guru/modals.php";
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Earnings (Annual)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                Jumlah Kelas</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">15,000</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fas fa-building fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ include "public/view/partials/guru/modals.php";
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Datang Hari ini
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -86,8 +86,8 @@ include "public/view/partials/guru/modals.php";
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Pending Requests</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                Tidak Datang</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">18 anak</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-comments fa-2x text-gray-300"></i>

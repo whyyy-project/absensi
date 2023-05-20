@@ -14,7 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="?hlm=guru">
+        <a class="nav-link" href="?hlm=admin">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -24,40 +24,28 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Interface 
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Wali Kelas</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Menu Wali Kelas:</h6>
-                <a class="collapse-item" href="?hlm=wali">Absensi</a>
-            </div>
-        </div>
+        <a class="nav-link" href="?hlm=kelas">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Data Kelas</span></a>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
-        </div>
+        <a class="nav-link" href="?hlm=guru">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Data Guru</span></a>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link" href="?hlm=siswa">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Data Siswa</span></a>
     </li>
 
     <!-- Divider -->

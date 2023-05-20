@@ -9,7 +9,7 @@ include "public/view/partials/admin/admin_modal.php";
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <h1 class="h3 mb-0 text-gray-800">Data Siswa</h1>
         
     </div>
     <!-- end page heading -->
@@ -102,7 +102,7 @@ include "public/view/partials/admin/admin_modal.php";
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Absensi </h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Master Data Siswa </h6>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -114,7 +114,7 @@ include "public/view/partials/admin/admin_modal.php";
                             <a class="dropdown-item" href="#">Refresh</a>
                             <a class="dropdown-item" href="#">Download</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">Tambah Siswa</a>
                         </div>
                     </div>
                 </div>
@@ -126,61 +126,68 @@ include "public/view/partials/admin/admin_modal.php";
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Masuk</th>
-                                    <th>Pulang</th>
-                                    <th>Keterangan</th>
-                                    <th>edit</th>
+                                    <th>Id Card</th>
+                                    <th>Kelas</th>
+                                    <th>Tahun Masuk</th>
+                                    <th>Status</th>
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                <th>No</th>
+                                    <th>No</th>
                                     <th>Nama</th>
-                                    <th>Masuk</th>
-                                    <th>Pulang</th>
-                                    <th>Keterangan</th>
-                                    <th>edit</th>
+                                    <th>Id Card</th>
+                                    <th>Kelas</th>
+                                    <th>Tahun Masuk</th>
+                                    <th>Status</th>
+                                    <th>Edit</th>
                                 </tr>
                             </tfoot>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>Gojo Satoru</td>
-                                    <td>06:45</td>
-                                    <td>13:00</td>
-                                    <td>H</td>
+                                    <td>123123</td>
+                                    <td>XI IPA</td>
+                                    <td>2018</td>
+                                    <td>I</td>
                                     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Naruto</td>
-                                    <td>07:45</td>
-                                    <td>13:01</td>
+                                    <td>132321</td>
+                                    <td>XI IPS</td>
+                                    <td>2019</td>
                                     <td>H</td>
                                     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Zoro</td>
-                                    <td>06:47</td>
-                                    <td>13:30</td>
-                                    <td>H</td>
+                                    <td>123123</td>
+                                    <td>X IPA</td>
+                                    <td>2020</td>
+                                    <td>A</td>
                                     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Todoroki</td>
-                                    <td>06:55</td>
-                                    <td>13:50</td>
+                                    <td>123123</td>
+                                    <td>XI IPS</td>
+                                    <td>2018</td>
                                     <td>H</td>
                                     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>Sinchan</td>
-                                    <td>06:45</td>
-                                    <td>12:51</td>
-                                    <td>H</td>
+                                    <td>123123</td>
+                                    <td>XI IPA</td>
+                                    <td>2018</td>
+                                    <td>S</td>
                                     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button</td>
                                 </tr>
                             </tbody>
