@@ -16,6 +16,8 @@
         Cover
     </title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -42,6 +44,8 @@
             justify-content: center;
         }
     }
+
+    
     </style>
 </head>
 
@@ -235,6 +239,40 @@
         </section>
         <!-- end slider section -->
     </div>
+
+
+    <!-- cari siswa -->
+
+    <section class="about_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                Cari Siswa
+                            </h2>
+                        </div>
+                        
+                        <div class="container">
+        <div class="row centered-form justify-content-center align-items-center">
+            <div class="col-md-4">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Masukkan NISN">
+                    </div>
+                    <button type="submit" class="btn btn-primary ml-2">Cari</button>
+                </form>
+            </div>
+        </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end cari siswa -->
 
 
     <!-- about section -->
@@ -438,90 +476,6 @@
 
     <!-- end discount section -->
 
-    <!-- brand section -->
-
-    <section class="brand_section">
-        <div class="container">
-            <div class="heading_container text-center">
-                <h2>
-                    Top 4 Siswa Terpagi
-                    <p>30 hari terakhir</p>
-                </h2>
-            </div>
-            <div class="brand_container layout_padding2">
-                <div class="box">
-                    <a href="">
-                        <div class="new">
-                            <h5>
-                                New
-                            </h5>
-                        </div>
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
-                            <h6>
-                                Chair
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
-                            <h6>
-                                Chair
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
-                            <h6>
-                                Chair
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/slider-img.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6 class="price">
-                                $100
-                            </h6>
-                            <h6>
-                                Chair
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <a href="" class="brand-btn">
-                See More
-            </a>
-        </div>
-    </section>
-
-    <!-- end brand section -->
     <!-- contact section -->
 
     <section class="contact_section layout_padding">
@@ -571,77 +525,6 @@
     </section>
 
     <!-- end contact section -->
-
-    <!-- client section -->
-    <section class="client_section layout_padding-bottom">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Testimonial
-                </h2>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="client_container layout_padding2">
-                <div class="client_box b-1">
-                    <div class="client-id">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/client-1.png" alt="" />
-                        </div>
-                        <div class="name">
-                            <h5>
-                                Magna
-                            </h5>
-                            <p>
-                                Consectetur adipiscing
-                            </p>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
-                        </p>
-                        <div>
-                            <div class="arrow_img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="client_box b-2">
-                    <div class="client-id">
-                        <div class="img-box">
-                            <img loading="lazy" src="public/assets/images/client-2.png" alt="" />
-                        </div>
-                        <div class="name">
-                            <h5>
-                                Aliqua
-                            </h5>
-                            <p>
-                                Consectetur adipiscing
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
-                        </p>
-                        <div>
-                            <div class="arrow_img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end client section -->
 
     <!-- info section -->
     <section class="info_section layout_padding2">
@@ -790,6 +673,7 @@
     <script type="text/javascript" src="public/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript">
     $(".owl-carousel").owlCarousel({
         loop: true,
