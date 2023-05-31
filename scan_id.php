@@ -40,16 +40,15 @@ $delete = mysqli_query($db, "DELETE FROM `temp_rfid` WHERE `temp_rfid`.`kode_mes
 // menambahkan ke temporary rfid
 $insert = mysqli_query($db, "INSERT INTO `temp_rfid` (`id_temp`, `rfid`, `jenis_scan`, `kode_mesin`, `last_use`)
 VALUES (NULL, '$getID', '$getStat', '$getMesin', '$waktu')");
-
-$qry_absen = mysqli_query($db, "SELECT id_absen_siswa, tgl, masuk FROM tb_absen_siswa WHERE id_siswa = '$id_siswa' AND tgl = '$tgl' ORDER BY id_absen_siswa");
-$absen_terbaru = mysqli_fetch_assoc($qry_absen);
+$qry_absen = mysqli_query($db, "SELECT * FROM tb_absen_siswa WHERE id_siswa = $id_siswa ORDER BY tgl DESC LIMIT 1");
+$absen_terbaru = mysqli_fetch_array($qry_absen);
 $row_absen = mysqli_num_rows($qry_absen);
 
-var_dump($absen_terbaru);
-$tempo = strtotime($waktu) - strtotime($absen_terbaru['masuk']);
+
+echo $tempo = strtotime($waktu) - strtotime($absen_terbaru['masuk']);
 if ($absen_terbaru['tgl'] == $tgl) {
     // update masuk
-    if ($tempo <= 600) {
+    if ($tempo < 600) {
         // 600 detik
         $id_absen = $absen_terbaru['id_absen_siswa'];
         $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `masuk` = '$waktu', `status_absen` = '$ket'
