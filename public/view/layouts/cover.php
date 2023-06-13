@@ -45,7 +45,36 @@
         }
     }
 
-    
+                /* CSS untuk mengatur tampilan form pencarian */
+                form.search-form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form.search-form input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+
+        form.search-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border-radius: 15%;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
     </style>
 </head>
 
@@ -244,32 +273,49 @@
     <!-- cari siswa -->
 
     <section class="about_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                Cari Siswa
-                            </h2>
-                        </div>
-                        
-                        <div class="container">
-        <div class="row centered-form justify-content-center align-items-center">
-            <div class="col-md-4">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Masukkan NISN">
-                    </div>
-                    <button type="submit" class="btn btn-primary ml-2">Cari</button>
-                </form>
-            </div>
-        </div>
+    <div class="container">
+        <h2 style="text-align: center;">Pencarian Data Siswa</h2>
+        <form method="GET" action="" class="search-form">
+            <input type="text" name="keyword" placeholder="Masukkan kata kunci pencarian">
+            <input type="submit" value="Cari">
+        </form>
+        <?php
+        // Data siswa
+        $siswa = array(
+            array('Nama' => 'John Doe', 'Kelas' => 'XII A', 'Alamat' => 'Jl. Ahmad Yani No. 123'),
+            array('Nama' => 'Jane Smith', 'Kelas' => 'XI B', 'Alamat' => 'Jl. Merdeka No. 456'),
+            array('Nama' => 'David Williams', 'Kelas' => 'X A', 'Alamat' => 'Jl. Sudirman No. 789')
+        );
+
+        // Cek apakah terdapat kata kunci pencarian
+        if (isset($_GET['keyword'])) {
+            $keyword = $_GET['keyword'];
+
+            // Filter data siswa berdasarkan kata kunci
+            $filtered_siswa = array_filter($siswa, function($item) use ($keyword) {
+                return (stripos($item['Nama'], $keyword) !== false) ||
+                       (stripos($item['Kelas'], $keyword) !== false) ||
+                       (stripos($item['Alamat'], $keyword) !== false);
+            });
+
+            // Tampilkan data siswa yang terfilter
+            if (!empty($filtered_siswa)) {
+                echo '<table>';
+                echo '<tr><th>Nama</th><th>Kelas</th><th>Alamat</th></tr>';
+                foreach ($filtered_siswa as $siswa) {
+                    echo '<tr>';
+                    echo '<td>'.$siswa['Nama'].'</td>';
+                    echo '<td>'.$siswa['Kelas'].'</td>';
+                    echo '<td>'.$siswa['Alamat'].'</td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
+            } else {
+                echo 'Data siswa tidak ditemukan.';
+            }
+        }
+        ?>
     </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- end cari siswa -->
