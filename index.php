@@ -2,9 +2,9 @@
 //session untuk login
 session_start();
 // session untuk logout
-// session_destroy();
+session_destroy();
 // contoh session
-$_SESSION['level'] = "guru";
+// $_SESSION['level'] = "admin";
 include "query/koneksi.php";
 if (empty($_SESSION['level'])) {
     if (isset($_REQUEST['hlm'])) {
@@ -31,7 +31,7 @@ if (empty($_SESSION['level'])) {
 
 }
 
-if ($_SESSION['level'] == "guru") {
+if (isset($_SESSION['level']) == "guru") {
     $title = "Guru | Sistem Absensi";
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];
@@ -60,37 +60,37 @@ if ($_SESSION['level'] == "guru") {
     }
 }
 
-// if ($_SESSION['level'] == "admin") {
-//     $title = "admin | Sistem Absensi";
-//     if (isset($_REQUEST['hlm'])) {
-//         $hlm = $_REQUEST['hlm'];
-//         switch ($hlm) {
-//             case 'admin':
-//                 include "./public/view/layouts/admin/admin_dashboard.php";
-//                 break;
-//             case 'kelas':
-//                 include "./public/view/layouts/admin/data_kelas.php";
-//                 break;
-//             case 'guru':
-//                 include "./public/view/layouts/admin/data_guru.php";
-//                 break;
-//             case 'siswa':
-//                 include "./public/view/layouts/admin/data_siswa.php";
-//                 break;
-//             case 'login':
-//                 include "./public/view/layouts/login.php";
-//                 break;
-//             case 'cover':
-//                 include "./public/view/layouts/cover.php";
-//                 break;
-//             case '404':
-//                 include "./public/view/eror/404.php";
-//                 break;
-//             default:
-//                 include "./public/view/layouts/admin/admin_dashboard.php";
-//                 break;
-//         }
-//     } else {
-//         include "./public/view/layouts/cover.php";
-//     }
-// }
+if (isset($_SESSION['level']) == "admin") {
+    $title = "admin | Sistem Absensi";
+    if (isset($_REQUEST['hlm'])) {
+        $hlm = $_REQUEST['hlm'];
+        switch ($hlm) {
+            case 'admin':
+                include "./public/view/layouts/admin/admin_dashboard.php";
+                break;
+            case 'kelas':
+                include "./public/view/layouts/admin/data_kelas.php";
+                break;
+            case 'guru':
+                include "./public/view/layouts/admin/data_guru.php";
+                break;
+            case 'siswa':
+                include "./public/view/layouts/admin/data_siswa.php";
+                break;
+            case 'login':
+                include "./public/view/layouts/login.php";
+                break;
+            case 'cover':
+                include "./public/view/layouts/cover.php";
+                break;
+            case '404':
+                include "./public/view/eror/404.php";
+                break;
+            default:
+                include "./public/view/layouts/admin/admin_dashboard.php";
+                break;
+        }
+    } else {
+        include "./public/view/layouts/cover.php";
+    }
+}
