@@ -45,7 +45,8 @@ $absen_terbaru = mysqli_fetch_array($qry_absen);
 $row_absen = mysqli_num_rows($qry_absen);
 
 
-echo $tempo = strtotime($waktu) - strtotime($absen_terbaru['masuk']);
+echo $tempo = strtotime($waktu) - strtotime($absen_terbaru['masuk']) . "<br>";
+echo strtotime($waktu) . '<br> ' . strtotime($absen_terbaru['masuk']);
 if ($absen_terbaru['tgl'] == $tgl) {
     // update masuk
     if ($tempo < 600) {
