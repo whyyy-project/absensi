@@ -16,6 +16,7 @@ if ($getToken != "12345678") {
 // setup waktu
 $waktu = date('H:i:s');
 $tgl = date('Y-m-d');
+$bulan = date('m');
 if ($waktu > "07:00:00") {
     $ket = "Terlambat";
     $ket_a = "T";
@@ -44,8 +45,18 @@ $qry_absen = mysqli_query($db, "SELECT * FROM tb_absen_siswa WHERE id_siswa = $i
 $absen_terbaru = mysqli_fetch_array($qry_absen);
 $row_absen = mysqli_num_rows($qry_absen);
 
+if ($row_absen == 0) {
+    $status_absen = "Selamat Datang";
+    if (str_replace(":", "", $waktu) > 70000) {
+        $status_absen = "Terlambat";
+    }
+    mysqli_query($db, "INSERT INTO `tb_absen_siswa` (`id_absen_siswa`, `id_siswa`, `tgl`, `masuk`, `pulang`, `keterangan_absen`, `status_absen`) VALUES (NULL, '$id_siswa', '$tgl', '$waktu', '', 'Masuk', '$status_absen')");
+    echo "berhasil";
+    return;
+}
 
-echo $tempo = strtotime($waktu) - strtotime($absen_terbaru['masuk']) . "<br>";
+
+echo $tempo = str_replace(":", "", $waktu) - str_replace(":", "", $absen_terbaru['masuk']);
 echo strtotime($waktu) . '<br> ' . strtotime($absen_terbaru['masuk']);
 if ($absen_terbaru['tgl'] == $tgl) {
     // update masuk
