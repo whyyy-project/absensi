@@ -29,7 +29,7 @@
     <link href="public/assets/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="public/assets/css/responsive.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="public/assets/favicon.ico" />
+    <link rel="shortcut icon" href="public/images/abror.ico" />
     <style>
         #mobile-view {
             display: none;
@@ -234,11 +234,10 @@
         <!-- end slider section -->
     </div>
     <!-- Section cari siswa -->
-    <section class="about_section layout_padding" id="cari">
+    <section class="cari_siswa" id="cari">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>Pencarian Data Siswa</h2>
