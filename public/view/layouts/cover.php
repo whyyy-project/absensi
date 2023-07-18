@@ -13,38 +13,34 @@
     <meta name="author" content="" />
 
     <title>
-        Cover
+        Welcome | Absensi App
     </title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="public/assets/css/bootstrap.css" />
 
     <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="public/assets/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="public/assets/css/responsive.css" rel="stylesheet" />
     <link rel="shortcut icon" href="public/assets/favicon.ico" />
     <style>
-    #mobile-view {
-        display: none;
-    }
-
-    @media (max-width: 992px) {
         #mobile-view {
-            display: flex;
-            justify-content: center;
+            display: none;
         }
-    }
 
+        @media (max-width: 992px) {
+            #mobile-view {
+                display: flex;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
@@ -57,9 +53,7 @@
                     <a class="navbar-brand" href="./">
                         <img loading="lazy" src="public/images/cover/logo-cover.png" width="150px" alt="logo" />
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -110,10 +104,11 @@
             </div>
         </header>
         <!-- end header section -->
+        
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="?hlm=scan">
+                <a href="scan">
                     <img loading="lazy" src="public/assets/images/play.png" alt="">
                 </a>
             </div>
@@ -238,10 +233,7 @@
         </section>
         <!-- end slider section -->
     </div>
-
-
-    <!-- cari siswa -->
-
+    <!-- Section cari siswa -->
     <section class="about_section layout_padding" id="cari">
         <div class="container">
             <div class="row">
@@ -303,8 +295,6 @@
             </div>
         </div>
     </section>
-
-    <!-- end cari siswa -->
 
 
     <!-- about section -->
@@ -379,7 +369,7 @@
                         </h5>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="assets/images/location-white.png" width="18px" alt="">
+                                <img loading="lazy" src="public/assets/images/location-white.png" width="18px" alt="">
                             </div>
                             <p>
                                 Jl Raya Sukosewu No. 147
@@ -387,7 +377,7 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="assets/images/telephone-white.png" width="12px" alt="">
+                                <img loading="lazy" src="public/assets/images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
                                 0822-4749-2922
@@ -395,7 +385,7 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="assets/images/envelope-white.png" width="18px" alt="">
+                                <img loading="lazy" src="public/assets/images/envelope-white.png" width="18px" alt="">
                             </div>
                             <p>
                                 maalabrorsukosewu00@gmail.com
@@ -421,13 +411,13 @@
 
                         <div class="social_box">
                             <a href="https://www.instagram.com/malabrortv/?hl=id">
-                                <img loading="lazy" src="assets/images/instagram.png" alt="malabrortv">
+                                <img loading="lazy" src="public/assets/images/instagram.png" alt="malabrortv">
                             </a>
                             <a href="https://www.tiktok.com/@malabrortv?_t=8dQoJthbEYs&_r=1">
-                                <img loading="lazy" src="assets/images/tiktok.png" alt="@malabrortv">
+                                <img loading="lazy" src="public/assets/images/tiktok.png" alt="@malabrortv">
                             </a>
                             <a href="https://www.youtube.com/@malabror_tv">
-                                <img loading="lazy" src="assets/images/youtube.png" alt="malabror_tv">
+                                <img loading="lazy" src="public/assets/images/youtube.png" alt="malabror_tv">
                             </a>
                         </div>
                     </div>
@@ -443,62 +433,23 @@
     <section class="container-fluid footer_section ">
         <div class="container">
             <p>
-                &copy; 2019 All Rights Reserved By
-                <a href="https://html.design/">Free Html Templates</a>
+                &copy; <?= date('Y') ?> All Rights Reserved By
+                <a href="https://github.com/whyyy24">Whyyy-Project</a>
             </p>
         </div>
     </section>
     <!-- end  footer section -->
 
+    <span id="topButton" onclick="scrollToTop()" class="top-btn">top</span>
+
     <script type="text/javascript" src="public/assets/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="public/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: [],
-        autoplay: true,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            420: {
-                items: 2
-            },
-            1000: {
-                items: 5
-            }
-        }
-
-    });
-    </script>
-    <script>
-    var nav = $("#navbarSupportedContent");
-    var btn = $(".custom_menu-btn");
-    btn.click
-    btn.click(function(e) {
-
-        e.preventDefault();
-        nav.toggleClass("lg_nav-toggle");
-        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-    });
-    </script>
-    <script>
-    $('.carousel').on('slid.bs.carousel', function() {
-        $(".indicator-2 li").removeClass("active");
-        indicators = $(".carousel-indicators li.active").data("slide-to");
-        a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-    })
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
     <script src="public/assets/js/custom-cover.js"></script>
 
-
-</body>
 </body>
 
+</html>
 </html>
