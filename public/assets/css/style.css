@@ -496,10 +496,12 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
 }
 
 .about_section .detail-box p {
   margin-top: 20px;
+  
 }
 
 .about_section .detail-box a {
@@ -522,6 +524,9 @@ a:focus {
 
 .about_section .img-box img {
   width: 100%;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 5);
 }
 
 .trending_section {
@@ -588,6 +593,8 @@ a:focus {
 
 .trending_section .img_container .box .img-box img {
   width: 100%;
+  border-radius: 5%;
+  filter: drop-shadow(0 0 10px rgba(119, 117, 117, 0.5));
 }
 
 .trending_section .img_container .box.b-1 {
@@ -722,15 +729,14 @@ a:focus {
 
 .contact_section {
   position: relative;
+  background-color: whitesmoke;
 }
 
 .contact_section .design-box {
   position: absolute;
-  bottom: 50%;
   -webkit-transform: translateY(50%);
   transform: translateY(50%);
   right: 0;
-  width: 75px;
 }
 
 .contact_section .design-box img {
@@ -758,38 +764,17 @@ a:focus {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
 }
 
-.contact_section input::-webkit-input-placeholder {
-  color: #131313;
-}
-
-.contact_section input:-ms-input-placeholder {
-  color: #131313;
-}
-
-.contact_section input::-ms-input-placeholder {
-  color: #131313;
-}
-
-.contact_section input::placeholder {
-  color: #131313;
-}
-
-.contact_section input.message-box {
-  height: 120px;
-}
-
 .contact_section button {
   display: inline-block;
   padding: 12px 45px;
   background-color: #24d278;
-  color: #ffffff;
+  color: #000000;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
   border-radius: 30px;
   border-radius: 30px;
   color: #fff;
-  margin-top: 35px;
 }
 
 .contact_section button:hover {
@@ -799,12 +784,11 @@ a:focus {
 }
 
 .contact_section .map_container {
-  height: 100%;
-  padding-bottom: 110px;
+
 }
 
 .contact_section .map_container .map-responsive {
-  height: 100%;
+
 }
 
 .client_section .custom_heading-container {
@@ -1075,3 +1059,139 @@ a:focus {
   transform: rotate(-45deg) translate(7px, -10px);
 }
 /*# sourceMappingURL=style.css.map */
+
+/* cari siswa */
+/* Gaya umum */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Gaya formulir pencarian */
+.search-form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.search-form input[type="text"]:focus {
+  background-color: #e0e0e0;
+}
+
+.search-form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+
+/* Gaya tabel data siswa */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: rgb(0, 179, 0);
+  color: #fff;
+}
+
+table td {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Gaya pesan jika data siswa tidak ditemukan */
+.data-not-found {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+/* wahyu */
+.top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(50, 205, 50, 0.8);
+  opacity: inherit;
+  color: #043608;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  animation: floating 2s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-5px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+#cursor {
+  display: inline-block;
+  width: 7px;
+  height: 16px;
+  background-color: #333;
+  animation: blink-caret 0.75s infinite;
+}
+@keyframes blink-caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
