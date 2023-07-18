@@ -28,7 +28,6 @@ if (empty($_SESSION['level'])) {
     } else {
         include "./public/view/layouts/cover.php";
     }
-
 }
 
 if (isset($_SESSION['level']) == "guru") {
