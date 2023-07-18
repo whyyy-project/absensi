@@ -62,7 +62,7 @@ function cetakAbsen($db, $id_card)
         $absen = mysqli_query($db, "SELECT * FROM tb_siswa
 LEFT JOIN tb_absen_siswa ON tb_siswa.id_siswa = tb_absen_siswa.id_siswa
 LEFT JOIN tb_kelas ON tb_siswa.id_kelas = tb_kelas.id_kelas
-WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa LIMIT 1;
+WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa DESC LIMIT 1;
     ");
         $data = mysqli_fetch_array($absen);
         if ($data['status_absen'] != "Terlambat") {
@@ -84,7 +84,7 @@ WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa LIMIT
             <div class="col-lg-6">
                 <div class="p-5">
                     <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">SCAN ABSENSI</h1>
+                        <h1 class="h4 text-gray-900 mb-3">SCAN ABSENSI</h1>
                         <h2>
                             <?= date('H:i:s'); ?>
                         </h2>
@@ -118,8 +118,7 @@ WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa LIMIT
                     </div>
                     <!-- end view idcard -->
 
-                    <hr>
-                    <a href="./" class="btn btn-link">Back to Dashboard</a>
+                    <a href="./" class="btn btn-link mt-4">Back to Dashboard</a>
                 </div>
             </div>
         </div>
