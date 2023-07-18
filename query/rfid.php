@@ -76,7 +76,6 @@ WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa DESC 
             $bg = "bg-scan2-image";
         }
 
-
     ?>
 
         <div class="row text-center">

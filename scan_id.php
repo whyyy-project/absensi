@@ -28,7 +28,7 @@ if ($waktu > "07:00:00") {
 }
 
 // mencari id siswanya
-$data_siswa = mysqli_query($db, "SELECT * FROM `tb_siswa`WHERE uuid = '$getID' ORDER BY id_siswa DESC LIMIT 1");
+$data_siswa = mysqli_query($db, "SELECT * FROM `tb_siswa`WHERE uuid = '$getID' AND status = 1 ORDER BY id_siswa DESC LIMIT 1");
 $result = mysqli_fetch_assoc($data_siswa);
 if (mysqli_num_rows($data_siswa) < 1) {
     echo "uuid tidak terdaftar";
@@ -39,7 +39,7 @@ if (mysqli_num_rows($data_siswa) < 1) {
 
 $id_siswa = $result['id_siswa'];
 // menghapus temporary dari mesin sebelumnya
-$delete = mysqli_query($db, "DELETE FROM `temp_rfid` WHERE `temp_rfid`.`kode_mesin` = '$getMesin';");
+$delete = mysqli_query($db, "DELETE FROM `temp_rfid` WHERE `temp_rfid`.`kode_mesin` = '$getMesin' AND jenis_scan ='absen';");
 // menambahkan ke temporary rfid
 $insert = mysqli_query($db, "INSERT INTO `temp_rfid` (`id_temp`, `rfid`, `jenis_scan`, `kode_mesin`, `last_use`)
 VALUES (NULL, '$getID', '$getStat', '$getMesin', '$waktu')");
