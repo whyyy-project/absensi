@@ -23,7 +23,7 @@ if ($waktu > "07:00:00") {
     $ket = "Terlambat";
     $ket_a = "T";
 } else {
-    $ket = "Tepat Waktu";
+    $ket = "Selamat Datang";
     $ket_a = "H";
 }
 
