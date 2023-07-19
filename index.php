@@ -5,6 +5,12 @@ session_start();
 // session_destroy();
 // contoh session
 $_SESSION['level'] = "admin";
+
+if (isset($_POST['login'])) {
+    echo "login";
+}
+
+
 include "query/koneksi.php";
 if (empty($_SESSION['level'])) {
     if (isset($_REQUEST['hlm'])) {

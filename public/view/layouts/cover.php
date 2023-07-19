@@ -60,19 +60,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About</a>
+                                <a class="nav-link" href="#"> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="shop.html">SOP </a>
+                                <a class="nav-link" href="#">SOP </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="furniture.html"> Furniture </a>
+                                <a class="nav-link" href="#"> Furniture </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
+                                <a class="nav-link" href="#">Contact us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="mobile-view" href="login">Login</a>
@@ -104,11 +104,11 @@
             </div>
         </header>
         <!-- end header section -->
-        
+
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="scan">
+                <a href="?hlm=scan">
                     <img loading="lazy" src="public/assets/images/play.png" alt="">
                 </a>
             </div>
@@ -342,7 +342,8 @@
                 <div class="col-md-12">
                     <div class="map_container">
                         <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.658272278782!2d111.923977!3d-7.2602780000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e782b12c820314d%3A0x9ed7d5c71ba0009e!2sMA%20Al-Abror%20Sukosewu!5e0!3m2!1sid!2sid!4v1687914894512!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.658272278782!2d111.923977!3d-7.2602780000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e782b12c820314d%3A0x9ed7d5c71ba0009e!2sMA%20Al-Abror%20Sukosewu!5e0!3m2!1sid!2sid!4v1687914894512!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -451,4 +452,5 @@
 </body>
 
 </html>
+
 </html>

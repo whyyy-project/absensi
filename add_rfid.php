@@ -16,10 +16,12 @@ if ($getStatus != 'tambah') {
 }
 $periksaData = mysqli_query($db, "SELECT * FROM tb_siswa WHERE uuid = '$getID'");
 $hitungData = mysqli_num_rows($periksaData);
+$delete_old_temp = mysqli_query($db, "DELETE FROM `temp_rfid` WHERE `temp_rfid`.`jenis_scan` = 'tambah' AND `temp_rfid`.`kode_mesin` = '$getKodeMesin'");
+
 if ($hitungData != 0) {
-    mysqli_query($db, "UPDATE `tb_siswa` SET `uuid` = 'ID Card $getID Dipakai orang lain', `updated_at` = now() WHERE `tb_siswa`.`uuid` = '$getID';");
+    http_response_code(404);
     echo "RFID sudah ada";
-    // return;
+    return;
 }
 mysqli_query($db, "INSERT INTO `temp_rfid` (`id_temp`, `rfid`, `jenis_scan`, `kode_mesin`, `last_use`) VALUES (NULL, '$getID', '$getStatus', '$getKodeMesin', '$time')");
 echo "berhasil menyimpan";

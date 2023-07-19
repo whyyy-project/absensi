@@ -30,7 +30,8 @@ if ($waktu > "07:00:00") {
 // mencari id siswanya
 $data_siswa = mysqli_query($db, "SELECT * FROM `tb_siswa`WHERE uuid = '$getID' AND status = 1 ORDER BY id_siswa DESC LIMIT 1");
 $result = mysqli_fetch_assoc($data_siswa);
-if (mysqli_num_rows($data_siswa) < 1) {
+if (mysqli_num_rows($data_siswa) == 0) {
+    http_response_code(404);
     echo "uuid tidak terdaftar";
     return;
     // jika uuid tidak ada program berhenti
@@ -75,9 +76,11 @@ if ($absen_terbaru['tgl'] == $tgl) {
         $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu', `status_absen` ='Selamat Jalan', `keterangan_absen` = 'Pulang'
     WHERE `tb_absen_siswa`.`id_absen_siswa` = '$id_absen' ");
 
+        // check rekap ada tidak ?
         $rekap = mysqli_query($db, "SELECT * FROM tb_rekap WHERE id_siswa = $id_siswa AND bulan = '$bulan' limit 1");
         $total_rekap = mysqli_num_rows($rekap);
         if ($total_rekap == 0) {
+            // jika bulan ini belum ada data-nya
             mysqli_query($db, "INSERT INTO `tb_rekap` (`id_rekap`, `id_siswa`, `bulan`, `$hari`) VALUES ('', '$id_siswa', '$bulan', 'H')");
             echo "berhasil absen Hadir hari " . $tgl;
         } else {
