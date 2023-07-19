@@ -35,7 +35,7 @@ if ($_SESSION['level'] == "guru") {
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];
         switch ($hlm) {
-            case 'guru':
+            case 'dashboard':
                 include "./public/view/layouts/guru/dashboard.php";
                 break;
             case 'wali':
@@ -70,7 +70,7 @@ if ($_SESSION['level'] == "admin") {
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];
         switch ($hlm) {
-            case 'admin':
+            case 'dashboard':
                 include "./public/view/layouts/admin/admin_dashboard.php";
                 break;
             case 'kelas':
