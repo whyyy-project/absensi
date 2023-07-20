@@ -89,8 +89,23 @@ if ($_SESSION['level'] == "admin") {
             case 'dashboard':
                 include "./public/view/layouts/admin/admin_dashboard.php";
                 break;
-            case 'kelas':
-                include "./public/view/layouts/admin/data_kelas.php";
+            case 'xipa':
+                include "./public/view/layouts/admin/x_ipa.php";
+                break;
+            case 'xips':
+                include "./public/view/layouts/admin/x_ips.php";
+                break;
+            case 'xiipa':
+                include "./public/view/layouts/admin/xi_ipa.php";
+                break;
+            case 'xiips':
+                include "./public/view/layouts/admin/xi_ips.php";
+                break;
+            case 'xiiipa':
+                include "./public/view/layouts/admin/xii_ipa.php";
+                break;
+            case 'xiiips':
+                include "./public/view/layouts/admin/xii_ips.php";
                 break;
             case 'guru':
                 include "./public/view/layouts/admin/data_guru.php";
