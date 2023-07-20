@@ -49,7 +49,7 @@ $absen_terbaru = mysqli_fetch_array($qry_absen);
 $row_absen = mysqli_num_rows($qry_absen);
 
 if ($row_absen == 0) {
-    $status_absen = "Selamat Datang";
+    $status_absen = "Tepat Waktu";
     if (str_replace(":", "", $waktu) > 70000) {
         $status_absen = "Terlambat";
     }
@@ -73,7 +73,7 @@ if ($absen_terbaru['tgl'] == $tgl) {
     // update pulang
     if ($tempo >= 600) {
         $id_absen = $absen_terbaru['id_absen_siswa'];
-        $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu', `status_absen` ='Selamat Jalan', `keterangan_absen` = 'Pulang'
+        $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu', `keterangan_absen` = 'Pulang'
     WHERE `tb_absen_siswa`.`id_absen_siswa` = '$id_absen' ");
 
         // check rekap ada tidak ?
@@ -87,7 +87,6 @@ if ($absen_terbaru['tgl'] == $tgl) {
             mysqli_query($db, "UPDATE `tb_rekap` SET `$hari` = 'H' WHERE `tb_rekap`.`id_siswa` = $id_siswa");
             echo "berhasil absen Hadir hari " . $tgl;
         }
-
 
         echo " pulang";
         return;
