@@ -19,6 +19,56 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
+
+<script>
+    function togglePassword(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const icon = passwordInput.nextElementSibling.querySelector('i');
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        }
+    }
+
+    function validatePassword() {
+        const passwordNew = document.getElementById("passwordNew").value;
+        const passwordConfirm = document.getElementById("passwordConfirm").value;
+        if (passwordNew !== passwordConfirm) {
+            alert("Password Baru tidak sesuai.");
+            return false; // Prevent form submission
+        }
+        if ((passwordNew.length < 8) || (passwordConfirm < 8)) {
+            alert("Minimal Password 8 digit.");
+            return false; // Prevent form submission
+        }
+        return true; // Proceed with form submission
+    }
+
+    function autoValidate() {
+        const passwordNew = document.getElementById("passwordNew").value;
+        const passwordConfirm = document.getElementById("passwordConfirm").value;
+        const alertConfirm = document.getElementById("alertPw");
+        if ((passwordNew.length < 8) || (passwordConfirm < 8)) {
+            document.getElementById("minLenght").classList.remove('d-none');
+        } else {
+            document.getElementById("minLenght").classList.add('d-none');
+
+        }
+        if (passwordNew !== passwordConfirm) {
+            alertConfirm.classList.remove('d-none');
+            document.getElementById("passwordConfirm").style.borderColor = '#dc3545';
+        } else {
+            alertConfirm.classList.add('d-none');
+            document.getElementById("passwordConfirm").style.borderColor = '';
+        }
+    }
+</script>
 <!-- Bootstrap core JavaScript-->
 <script src="public/assets/vendor/jquery/jquery.min.js"></script>
 <script src="public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

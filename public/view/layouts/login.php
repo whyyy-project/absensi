@@ -17,6 +17,8 @@
 
     <!-- Custom styles for this template-->
     <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="public/images/abror.ico" />
+
     <style>
         .bg-login-image-2 {
             background: url("public/images/cover/slide-3.png");
@@ -48,12 +50,18 @@
                                     </div>
                                     <form class="user" action="./" method="post">
                                         <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username...">
+                                            <input type="text" name="username" value="<?= isset($_SESSION['temp']) ? $_SESSION['temp']  : '' ?>" class="form-control form-control-user" id="username" aria-describedby="emailHelp" placeholder="Enter Username..." style=" <?= isset($_SESSION['temp']) ? 'border-color: red;'  : '' ?>">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password" class="form-control form-control-user" oninput="validation()" id="passwordAkun" style=" <?= isset($_SESSION['temp']) ? 'border-color: red;'  : '' ?>" placeholder="Password">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="badge badge-danger d-none" role="alert" id="minLenght">
+                                            Minimal Password 8 digit !
+                                        </div>
+                                        <div class="badge badge-danger <?= isset($_SESSION['temp']) ? ''  : 'd-none' ?>" role="alert" id="minLenght">
+                                            Username atau Password salah !
+                                        </div>
+                                        <div class="form-group sh">
                                         </div>
                                         <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                             Login
@@ -74,7 +82,19 @@
         </div>
 
     </div>
+    <script>
+        function validation() {
+            const inputPassword = document.getElementById("passwordAkun").value;
+            if (inputPassword.length < 8) {
+                inputPassword.style.borderColor = '#dc3545';
+                document.getElementById("minLenght").classList.remove('d-none');
+            } else {
+                inputPassword.style.borderColor = '';
+                document.getElementById("minLenght").classList.add('d-none');
 
+            }
+        }
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="public/assets/vendor/jquery/jquery.min.js"></script>
     <script src="public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

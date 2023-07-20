@@ -1,5 +1,6 @@
 <?php
 include "query/koneksi.php";
+include "query/encrypt.php";
 //session untuk login
 session_start();
 // session untuk logout
@@ -8,15 +9,34 @@ session_start();
 if (isset($_POST['login'])) {
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
+    $_SESSION['temp'] = $username;
 
-    $query_akun = mysqli_query($db, "SELECT * FROM akun LEFT JOIN kariyawan ON akun.id_akun = kariyawan.id_kariyawan WHERE akun.username = '$username' AND akun.password = MD5('$password') LIMIT 1;");
+    $query_akun = mysqli_query($db, "SELECT * FROM akun LEFT JOIN kariyawan ON akun.id_akun = kariyawan.id_kariyawan WHERE akun.username = '$username' AND akun.password = MD5('$password');");
     $data_akun = mysqli_fetch_array($query_akun);
-
-    $_SESSION['nama'] = $data_akun['nama_kariyawan'];
-    $_SESSION['id'] = $data_akun['id_kariyawan'];
-    $_SESSION['level'] = $data_akun['level_akun'];
-    header("location:./?hlm=dashboard");
+    if (mysqli_num_rows($query_akun) != 1) {
+        header("location:./?hlm=login");
+    } else {
+        $_SESSION['nama'] = $data_akun['nama_kariyawan'];
+        $_SESSION['id'] = $data_akun['id_kariyawan'];
+        $_SESSION['level'] = $data_akun['level_akun'];
+        header("location:./?hlm=dashboard");
+    }
 }
+if (isset($_POST['changePassword'])) {
+    $passwordOld = md5(htmlspecialchars($_POST['passwordOld']));
+    $passwordNew = md5(htmlspecialchars($_POST['passwordNew']));
+    $idKariyawan = $_SESSION['id'];
+    $getData = mysqli_query($db, "SELECT * FROM kariyawan LEFT JOIN akun ON akun.id_akun = kariyawan.id_akun WHERE kariyawan.id_kariyawan = '$idKariyawan' AND akun.password ='$passwordOld'");
+    $baris = mysqli_num_rows($getData);
+    if ($baris == 1) {
+        $updatePw = mysqli_query($db, "UPDATE akun LEFT JOIN kariyawan ON akun.id_akun = kariyawan.id_akun SET akun.password = '$passwordNew' WHERE kariyawan.id_kariyawan = '$idKariyawan' ");
+        $status = "berhasil";
+    } else {
+        $status = "gagal";
+    }
+    header("location:./?hlm=changePassword&status={$status}");
+}
+
 if (isset($_GET['logout'])) {
     session_destroy();
 }
@@ -59,9 +79,6 @@ if ($_SESSION['level'] == "guru") {
                 break;
             case 'rekap':
                 include "./public/view/layouts/guru/rekap.php";
-                break;
-            case 'login':
-                include "./public/view/layouts/login.php";
                 break;
             case 'cover':
                 include "./public/view/layouts/cover.php";
@@ -112,9 +129,6 @@ if ($_SESSION['level'] == "admin") {
                 break;
             case 'siswa':
                 include "./public/view/layouts/admin/data_siswa.php";
-                break;
-            case 'login':
-                include "./public/view/layouts/login.php";
                 break;
             case 'cover':
                 include "./public/view/layouts/cover.php";

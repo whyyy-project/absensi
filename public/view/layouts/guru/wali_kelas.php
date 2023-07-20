@@ -24,15 +24,6 @@ include "public/view/partials/guru/modals.php";
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Data Siswa</h6>
-                    <!-- <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Opsi :</div>
-                            <a class="dropdown-item" href="#">Download</a>
-                        </div>
-                    </div> -->
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
@@ -45,6 +36,7 @@ include "public/view/partials/guru/modals.php";
                                     <th>NIS</th>
                                     <th>Nama</th>
                                     <th>Angkatan</th>
+                                    <th>Status</th>
                                     <th>Edit</th>
                                 </tr>
                             </thead>
@@ -58,6 +50,7 @@ include "public/view/partials/guru/modals.php";
                                         <td><?= $siswa['nis'] ?></td>
                                         <td><?= $siswa['nama_siswa'] ?></td>
                                         <td><?= $siswa['angkatan'] ?></td>
+                                        <td><?= $siswa['status'] == 1 ? "Aktif" : "Tidak Aktif" ?></td>
                                         <td class="text-center"><a href="#" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a></td>
                                     </tr>
                                 <?php endforeach; ?>

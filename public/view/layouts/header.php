@@ -23,6 +23,15 @@
 
     <!-- icon -->
     <link rel="shortcut icon" href="public/images/abror.ico" />
+    <style>
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
 
 
 </head>

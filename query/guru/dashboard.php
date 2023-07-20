@@ -1,6 +1,6 @@
 <?php
 $idKariyawan = $_SESSION['id'];
-$qry_siswa = mysqli_query($db, "SELECT * FROM `tb_siswa` LEFT JOIN tb_kelas ON tb_siswa.id_kelas = tb_kelas.id_kelas WHERE tb_kelas.id_kariyawan = $idKariyawan;");
+$qry_siswa = mysqli_query($db, "SELECT * FROM `tb_siswa` LEFT JOIN tb_kelas ON tb_siswa.id_kelas = tb_kelas.id_kelas WHERE tb_kelas.id_kariyawan = $idKariyawan AND tb_siswa.status = 1;");
 $totalSiswa = mysqli_num_rows($qry_siswa);
 $idKelas = mysqli_fetch_array($qry_siswa);
 $idKls = $idKelas['id_kelas'];

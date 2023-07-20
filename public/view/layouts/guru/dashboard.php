@@ -10,7 +10,21 @@ include "public/view/partials/guru/modals.php";
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    </div>
 
+    <?php
+    if (isset($_GET['status']) && $_GET['status'] == "berhasil") {
+        $class = "alert alert-success";
+        $message = "Berhasil mengubah password";
+    } elseif (isset($_GET['status']) && $_GET['status'] == "gagal") {
+        $class = "alert alert-danger";
+        $message = "Gagal mengubah password !";
+    } else {
+        $class = "d-none";
+        $message = "";
+    } ?>
+    <div class="<?= $class ?>" role="alert">
+        <?= $message ?>
     </div>
     <!-- end page heading -->
 
@@ -31,7 +45,7 @@ include "public/view/partials/guru/modals.php";
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <div class="dropdown-header">Opsi :</div>
-                            <!-- <a class="dropdown-item" href="#">Refresh</a> -->
+                            <a class="dropdown-item" href="?hlm=dashboard">Refresh</a>
                             <a class="dropdown-item" href="#">Download</a>
                         </div>
                     </div>
@@ -59,10 +73,10 @@ include "public/view/partials/guru/modals.php";
                                         <td><?= $dataAbs['nama_siswa'] ?></td>
                                         <td>
                                             <?php
-                                            $dateOld = date('Y-M-d', strtotime($dataAbs['tgl']));
+                                            $dateOld = date('Y-m-d', strtotime($dataAbs['tgl']));
                                             $date_explode = explode("-", $dateOld);
                                             ?>
-                                            <?= $date_explode['2'] . " - " . $date_explode['1'] . " - " . $date_explode['0'] ?></td>
+                                            <?= $date_explode['2'] . "-" . $date_explode['1'] . "-" . $date_explode['0'] ?></td>
                                         <td><?= $dataAbs['masuk'] ?></td>
                                         <td><?= $dataAbs['pulang'] ?></td>
                                         <td>
