@@ -8,6 +8,7 @@ session_start();
 if (isset($_POST['login'])) {
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
+
     $query_akun = mysqli_query($db, "SELECT * FROM akun LEFT JOIN kariyawan ON akun.id_akun = kariyawan.id_kariyawan WHERE akun.username = '$username' AND akun.password = MD5('$password') LIMIT 1;");
     $data_akun = mysqli_fetch_array($query_akun);
 
@@ -42,6 +43,7 @@ if (empty($_SESSION['level'])) {
     } else {
         include "./public/view/layouts/cover.php";
     }
+    return;
 }
 
 if ($_SESSION['level'] == "guru") {
