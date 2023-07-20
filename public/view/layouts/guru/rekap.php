@@ -79,7 +79,7 @@ include "public/view/partials/guru/modals.php";
                                             <td class="<?= $detail ?>">
                                                 <div class="dropdown">
                                                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="<?= $siswa[$i] ?>">
-                                                        <span class="<?= $detail ?>"><?= $siswa[$i] == null ? 'kosong' : $siswa[$i] ?></span>
+                                                        <span class="<?= $detail ?>"><?= $siswa[$i] == null ? 'Pilih' : $siswa[$i] ?></span>
                                                     </button>
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                                         <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("A", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="A">A</a>
