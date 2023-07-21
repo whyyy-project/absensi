@@ -41,6 +41,39 @@
                 justify-content: center;
             }
         }
+
+        /* wahyu */
+        .top-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: none;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(50, 205, 50, 0.8);
+            opacity: inherit;
+            color: #043608;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            animation: floating 2s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -233,67 +266,7 @@
         </section>
         <!-- end slider section -->
     </div>
-    <!-- Section cari siswa -->
-    <section class="cari_siswa" id="cari">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>Pencarian Data Siswa</h2>
-                        </div>
-                        <form method="GET" action="#cari" class="search-form mt-3">
-                            <input type="text" name="keyword" placeholder="Masukkan kata kunci pencarian">
-                            <input type="submit" value="Cari">
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-12">
 
-                    <?php
-                    // Data siswa
-                    $siswa = array(
-                        array('No' => '1', 'Nama' => 'John Doe', 'Kelas' => 'XII A', 'Absen' => 'H,I,S,T', 'Tanggal Absen' => '2023-06-01'),
-                        array('No' => '2', 'Nama' => 'Jane Smith', 'Kelas' => 'XI B', 'Absen' => 'H,I,S,T', 'Tanggal Absen' => '2023-06-02'),
-                        array('No' => '3', 'Nama' => 'David Williams', 'Kelas' => 'X A', 'Absen' => 'H,I,S,T', 'Tanggal Absen' => '2023-06-03')
-                    );
-
-                    // Cek apakah terdapat kata kunci pencarian
-                    if (isset($_GET['keyword'])) {
-                        $keyword = $_GET['keyword'];
-
-                        // Filter data siswa berdasarkan kata kunci
-                        $filtered_siswa = array_filter($siswa, function ($item) use ($keyword) {
-                            return (stripos($item['No'], $keyword) !== false) ||
-                                (stripos($item['Nama'], $keyword) !== false) ||
-                                (stripos($item['Kelas'], $keyword) !== false) ||
-                                (stripos($item['Absen'], $keyword) !== false) ||
-                                (stripos($item['Tanggal Absen'], $keyword) !== false);
-                        });
-
-                        // Tampilkan data siswa yang terfilter
-                        if (!empty($filtered_siswa)) {
-                            echo '<table>';
-                            echo '<tr><th>No</th><th>Nama</th><th>Kelas</th><th>Absen</th><th>Tanggal Absen</th></tr>';
-                            foreach ($filtered_siswa as $siswa) {
-                                echo '<tr>';
-                                echo '<td>' . $siswa['No'] . '</td>';
-                                echo '<td>' . $siswa['Nama'] . '</td>';
-                                echo '<td>' . $siswa['Kelas'] . '</td>';
-                                echo '<td>' . substr($siswa['Absen'], 0, 1) . '</td>';
-                                echo '<td>' . $siswa['Tanggal Absen'] . '</td>';
-                                echo '</tr>';
-                            }
-                            echo '</table>';
-                        } else {
-                            echo 'Data siswa tidak ditemukan.';
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- about section -->

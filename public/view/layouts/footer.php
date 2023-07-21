@@ -2,7 +2,8 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Whyyy-Project <?= date('Y') ?></span>
+            <span>&copy; <?= date('Y') ?> All Rights Reserved By
+                <a href="https://github.com/whyyy24" class="text-decoration-none">Whyyy-Project</a></span>
         </div>
     </div>
 </footer>
