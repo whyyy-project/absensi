@@ -21,7 +21,7 @@
 
     <style>
         .bg-login-image-2 {
-            background: url("public/images/cover/slide-3.png");
+            background: url("public/images/scan_image.jpg");
             background-position: center;
             background-size: cover;
         }
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="form-group sh">
                                         </div>
-                                        <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" name="login" class="btn btn-primary btn-user my-4 btn-block">
                                             Login
                                         </button>
                                     </form>
