@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2023 at 12:35 AM
+-- Generation Time: Jul 21, 2023 at 09:12 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -104,7 +104,8 @@ CREATE TABLE `tb_kelas` (
 --
 
 INSERT INTO `tb_kelas` (`id_kelas`, `id_kariyawan`, `nama_kelas`) VALUES
-(1, 1, 'XII - IPA 2');
+(1, 1, 'XII - IPA 2'),
+(2, 1, 'XII - IPA 1');
 
 -- --------------------------------------------------------
 
@@ -149,6 +150,15 @@ CREATE TABLE `tb_rekap` (
   `31` enum('H','S','I','A') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `tb_rekap`
+--
+
+INSERT INTO `tb_rekap` (`id_rekap`, `id_siswa`, `bulan`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `24`, `25`, `26`, `27`, `28`, `29`, `30`, `31`) VALUES
+(6, 2, '03-2000', 'H', 'S', 'H', 'H', 'A', 'H', 'A', 'S', 'I', NULL, NULL, NULL, 'I', NULL, NULL, 'H', NULL, NULL, NULL, NULL, 'H', 'H', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 2, '05-2000', 'S', 'H', 'H', 'H', 'A', 'I', 'A', 'S', 'H', NULL, NULL, NULL, 'H', NULL, NULL, 'H', NULL, 'H', NULL, NULL, 'H', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 2, '03-2000', 'S', 'S', 'H', 'H', 'A', 'H', 'A', 'S', 'I', NULL, NULL, NULL, 'I', NULL, NULL, 'H', NULL, NULL, NULL, NULL, NULL, 'H', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -172,7 +182,7 @@ CREATE TABLE `tb_siswa` (
 --
 
 INSERT INTO `tb_siswa` (`id_siswa`, `uuid`, `id_kelas`, `nis`, `nama_siswa`, `angkatan`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'e3d0f095', 1, '111111', 'Wahyu Nur Cahyo', '2016', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00'),
+(2, 'adacdcasa', 1, '222222', 'Wahyu Nur Cahyo', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00'),
 (4, 'as3efi09', 1, '222222', 'Adi Sukmana', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00');
 
 -- --------------------------------------------------------
@@ -266,13 +276,13 @@ ALTER TABLE `tb_absen_siswa`
 -- AUTO_INCREMENT for table `tb_kelas`
 --
 ALTER TABLE `tb_kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_rekap`
 --
 ALTER TABLE `tb_rekap`
-  MODIFY `id_rekap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_rekap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_siswa`
