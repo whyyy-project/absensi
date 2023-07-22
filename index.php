@@ -99,6 +99,11 @@ if ($_SESSION['level'] == "guru") {
 }
 
 if ($_SESSION['level'] == "admin") {
+    if (isset($_POST['tambah-kelas'])) {
+        $namaKelas = htmlspecialchars($_POST['nama-kelas']);
+        $tambahKelas = mysqli_query($db, "INSERT INTO `tb_kelas` (`id_kelas`, `nama_kelas`) VALUES (NULL, '$namaKelas')");
+        $tambahKelas ? $stat = "berhasil" : $stat = "gagal";
+    }
     $title = "admin | Sistem Absensi";
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];
