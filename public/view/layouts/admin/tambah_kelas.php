@@ -40,6 +40,10 @@ include "public/view/partials/admin/admin_modal.php";
                             <label for="nama-kelas" class="col-4 mt-2 text-center">Nama Kelas </label>
                             <input type="text" name="nama-kelas" id="nama-kelas" class="form-control form-control-user col-6" placeholder="Nama Kelas">
                         </div>
+                        <div class="form-group d-flex">
+                            <label for="angkatan" class="col-4 mt-2 text-center">Angkatan Kelas </label>
+                            <input type="text" name="angkatan" id="nama-kelas" class="form-control form-control-user col-6" placeholder="Angkatan Kelas">
+                        </div>
                         <div class="form-group text-center">
                             <button type="submit" name="tambah-kelas" class="btn btn-success">Simpan</button>
                         </div>

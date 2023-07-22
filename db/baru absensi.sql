@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2023 at 09:12 PM
+-- Generation Time: Jul 22, 2023 at 08:18 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,7 +40,7 @@ CREATE TABLE `akun` (
 
 INSERT INTO `akun` (`id_akun`, `username`, `password`, `level_akun`) VALUES
 (1, 'wahyu123', '8cbbdc3fff847eee79abadc7b693b60e', 'guru'),
-(2, 'adi12345', 'f8435ccb373cd44b44b30b21dd597080', 'admin');
+(2, 'adi12345', '0192023a7bbd73250516f069df18b500', 'admin');
 
 -- --------------------------------------------------------
 
@@ -52,16 +52,17 @@ CREATE TABLE `kariyawan` (
   `id_kariyawan` int(11) NOT NULL,
   `nama_kariyawan` varchar(255) NOT NULL,
   `jenis` varchar(255) NOT NULL,
-  `id_akun` int(11) NOT NULL
+  `id_akun` int(11) NOT NULL,
+  `id_kelas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kariyawan`
 --
 
-INSERT INTO `kariyawan` (`id_kariyawan`, `nama_kariyawan`, `jenis`, `id_akun`) VALUES
-(1, 'John Yoe', 'Guru', 1),
-(2, 'John Adie', 'Staff TU', 2);
+INSERT INTO `kariyawan` (`id_kariyawan`, `nama_kariyawan`, `jenis`, `id_akun`, `id_kelas`) VALUES
+(1, 'John Yoe', 'Guru', 1, 8),
+(2, 'John Adie', 'Staff TU', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -95,17 +96,22 @@ INSERT INTO `tb_absen_siswa` (`id_absen_siswa`, `id_siswa`, `tgl`, `masuk`, `pul
 
 CREATE TABLE `tb_kelas` (
   `id_kelas` int(11) NOT NULL,
-  `id_kariyawan` int(11) NOT NULL,
-  `nama_kelas` varchar(255) NOT NULL
+  `nama_kelas` varchar(255) NOT NULL,
+  `angkatan_kelas` varchar(255) NOT NULL,
+  `status_kelas` enum('1','0') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_kelas`
 --
 
-INSERT INTO `tb_kelas` (`id_kelas`, `id_kariyawan`, `nama_kelas`) VALUES
-(1, 1, 'XII - IPA 2'),
-(2, 1, 'XII - IPA 1');
+INSERT INTO `tb_kelas` (`id_kelas`, `nama_kelas`, `angkatan_kelas`, `status_kelas`) VALUES
+(8, 'X IPS 1', '2000', '1'),
+(9, 'XI IPA 2', '2021', '1'),
+(10, 'X IPS 10', '2022', '1'),
+(11, 'XII IPA 1', '2023', '0'),
+(12, 'XI IPS 1', '2024', '1'),
+(13, 'XI IPA 4', '2018', '1');
 
 -- --------------------------------------------------------
 
@@ -182,8 +188,8 @@ CREATE TABLE `tb_siswa` (
 --
 
 INSERT INTO `tb_siswa` (`id_siswa`, `uuid`, `id_kelas`, `nis`, `nama_siswa`, `angkatan`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'adacdcasa', 1, '222222', 'Wahyu Nur Cahyo', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00'),
-(4, 'as3efi09', 1, '222222', 'Adi Sukmana', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00');
+(2, 'adacdcasa', 8, '222222', 'Wahyu Nur Cahyo', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00'),
+(4, 'as3efi09', 8, '222222', 'Adi Sukmana', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00');
 
 -- --------------------------------------------------------
 
@@ -214,7 +220,8 @@ ALTER TABLE `akun`
 --
 ALTER TABLE `kariyawan`
   ADD PRIMARY KEY (`id_kariyawan`),
-  ADD KEY `tb_akun` (`id_akun`);
+  ADD KEY `tb_akun` (`id_akun`),
+  ADD KEY `tb_kelas` (`id_kelas`);
 
 --
 -- Indexes for table `tb_absen_siswa`
@@ -227,8 +234,7 @@ ALTER TABLE `tb_absen_siswa`
 -- Indexes for table `tb_kelas`
 --
 ALTER TABLE `tb_kelas`
-  ADD PRIMARY KEY (`id_kelas`),
-  ADD KEY `id_kariyawan` (`id_kariyawan`);
+  ADD PRIMARY KEY (`id_kelas`);
 
 --
 -- Indexes for table `tb_rekap`
@@ -276,7 +282,7 @@ ALTER TABLE `tb_absen_siswa`
 -- AUTO_INCREMENT for table `tb_kelas`
 --
 ALTER TABLE `tb_kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_rekap`
