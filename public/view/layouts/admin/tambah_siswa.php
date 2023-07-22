@@ -51,7 +51,7 @@ include "public/view/partials/admin/admin_modal.php";
                         </div>
                         <div class="form-group d-flex">
                             <label for="idcard" class="col-4 mt-2 text-center">ID Card</label>
-                            <input type="text" name="uuid" id="idcard" class="text-center form-control col-6" placeholder="Harap Scan ID Card" readonly value="coba">
+                            <input type="text" name="uuid" id="idcard" class="text-center form-control col-6" placeholder="Harap Scan ID Card" readonly value="Scan">
                         </div>
                         <div class="form-group d-flex">
                             <label for="kelas" class="col-4 mt-2 text-center">Kelas</label>
