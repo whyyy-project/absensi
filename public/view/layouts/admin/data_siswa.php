@@ -32,7 +32,7 @@ include "public/view/partials/admin/admin_modal.php";
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <div class="dropdown-header">Opsi :</div>
-                            <a class="dropdown-item" href="#">Refresh</a>
+                            <a class="dropdown-item" href="?hlm=siswa">Refresh</a>
                             <a class="dropdown-item" href="#">Download</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Tambah Siswa</a>
