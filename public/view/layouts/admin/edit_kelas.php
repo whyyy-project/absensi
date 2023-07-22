@@ -1,186 +1,134 @@
-<div class="content">
-    <div class="row">
-        <?php include "../query/super_edit_akun.php";
-        if (isset($_GET[md5('id_akun')])) {
-            ?>
-            <a href="?hlm=dashboard">Beranda</a> » <a href="?hlm=user">Data User</a> » Edit Data
-            <div class="widget">
-                <div class="widget-header">
-                    <h2><strong>Edit</strong> User</h2>
-                </div>
-                <div class="col-md-12">
-                    <form action="?hlm=edit&<?= md5("id_akun") ?>=<?= encrypt($data['id_user'], $key) ?>&update"
-                        method="post" class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label for="input-text" class="col-sm-2 control-label">Nama User</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="<?= $data['nama'] ?>" class="form-control" name="nama"
-                                    id="input-text" placeholder="Nama User" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-text" class="col-sm-2 control-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="username" id="input-text"
-                                    placeholder="Kosongkan jika tidak diubah">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-text" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="password" id="input-text"
-                                    placeholder="Kosongkan jika tidak diubah">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-text" class="col-sm-2 control-label">Telepon</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="<?= $data['no_wa'] ?>" class="form-control" name="telepon"
-                                    id="input-text" placeholder="Telepon User" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-text" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" value="<?= $data['email'] ?>" class="form-control" name="email"
-                                    id="input-text" placeholder="Email User" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-text" class="col-sm-2 control-label">Kode(NIM, NIDN, User Eksternal)</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="<?= $data['kode'] ?>" class="form-control" name="kode"
-                                    id="input-text" placeholder="Kode User" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-number" class="col-sm-2 control-label">Poin User</label>
-                            <div class="col-sm-10">
-                                <input type="number" value="<?= $data['poin'] ?>" class="form-control" name="poin"
-                                    id="input-text" placeholder="Poin User" required>
-                            </div>
-                        </div>
+<?php
+// memanggil partials
+include "public/view/layouts/header.php";
+include "public/view/partials/admin/admin_sidebar.php";
+include "public/view/partials/admin/admin_wrapper.php";
+include "public/view/partials/admin/admin_modal.php";
+?>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Kelas X IPA</h1>
+        
+    </div>
+    <!-- end page heading -->
 
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">Status Akun</label>
-                            <div class="col-md-10">
-                                <select class="form-control" name="status">
-                                    <?php
-                                    if ($data['status'] == "aktif") {
-                                        echo "
-                        <option value='aktif'>Aktif</option>
-                        <option value='tidak aktif'>Tidak Aktif</option>
-                        ";
-                                    } else {
-                                        echo "
-                        <option value='tidak aktif'>Tidak Aktif</option>
-                        <option value='aktif'>Aktif</option>
-                        ";
-                                    }
-                                    ?>
-                                </select>
-                            </div>
+    <!-- Content Row -->
+    <div class="row">
+        
+
+        <!-- Area Chart -->
+        <div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Master Data Siswa</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Opsi :</div>
+                            <a class="dropdown-item" href="?hlm=siswa">Refresh</a>
+                            <a class="dropdown-item" href="#">Download</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="?hlm=tambah-siswa">Tambah Siswa</a>
                         </div>
-                        <div class="col-md-12 text-center">
-                            <button type="submit" name="<?= md5('update_user') ?>" class="btn btn-success">Simpan</button>
-                            <a href="?hlm=user" class="btn btn-danger">Batal</a>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-                <hr class="divider" />
+
+                <div class="col-12 mt-4 ml-2">
+
+    <!-- Form Status Wali Kelas -->
+    <div class="form-inline mb-3">
+        <label for="status_wali_kelas" class="col-2 col-form-label" style="font-weight: bold;">Status:</label>
+        <div class="col-3">
+            <select class="form-select" id="status_wali_kelas" style="border: 1px solid #ccc; border-radius: 5px;">
+                <option value="Lulus">Lulus</option>
+                <option value="Aktif">Aktif</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Form Nama Kelas -->
+    <div class="form-inline mb-3">
+        <label for="kelas_wali_kelas" class="col-2 col-form-label" style="font-weight: bold;">Nama Kelas:</label>
+        <div class="col-1">
+            <select class="form-select" id="kelas_wali_kelas" style="border: 1px solid #ccc; border-radius: 5px;">
+                <option value="X-IPA">X-IPA</option>
+                <option value="X-IPS">X-IPS</option>
+                <option value="XI-IPA">XI-IPA</option>
+                <option value="XI-IPS">XI-IPS</option>
+                <option value="XII-IPA">XII-IPA</option>
+                <option value="XII-IPS">XII-IPS</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-primary" style="border-radius: 5px;">Save</button>
+        </div>
+    </div>
+
+    <!-- Form Wali Kelas -->
+    <div class="form-inline mb-3">
+        <label for="wali_kelas" class="col-2 col-form-label" style="font-weight: bold;">Wali Kelas:</label>
+        <div class="col-3">
+            <select class="form-select" id="wali_kelas" style="border: 1px solid #ccc; border-radius: 5px;">
+                <option value="John Doe">John Doe</option>
+                <option value="Jane Doe">Jane Doe</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr class="text-center">
+                    <th>No</th>
+                    <th>Id Card</th>
+                    <th>NIS</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Tahun Masuk</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="text-center">
+                    <td>1</td>
+                    <td>11532</td>
+                    <td>223344</td>
+                    <td>Joko Siswanto</td>
+                    <td>X IPA</td>
+                    <td>2020</td>
+                    <td>Aktif</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='edit_siswa.php'">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
             </div>
-        <?php }
-        if (isset($_GET[md5('id_admin')])) { ?>
-            <a href="?hlm=dashboard">Beranda</a> » <a href="?hlm=admin">Data Admin</a> » Edit Data
-            <div class="widget">
-                <div class="widget-header">
-                    <h2><strong>Edit</strong> Admin</h2>
-                </div>
-                <div class="col-md-12">
-                    <form action="?hlm=edit&<?= md5("id_admin") ?>=<?= encrypt($data['id_admin'], $key) ?>&update"
-                        method="post" class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label for="input-nama" class="col-sm-2 control-label">Nama Admin</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="<?= $data['nama_admin'] ?>" class="form-control  text-center"
-                                    name="nama" id="input-nama" placeholder="Nama Admin" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-uname" class="col-sm-2 control-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control  text-center" name="username" id="input-uname"
-                                    placeholder="Kosongkan jika tidak diubah">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-pass" class="col-sm-2 control-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control text-center" name="password" id="input-pass"
-                                    placeholder="Kosongkan jika tidak diubah">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-tlp" class="col-sm-2 control-label">Telepon</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="<?= $data['wa_admin'] ?>" class="form-control  text-center"
-                                    name="telepon" id="input-tlp" placeholder="Telepon Admin" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-mail" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" value="<?= $data['email_admin'] ?>" class="form-control  text-center"
-                                    name="email" id="input-mail" placeholder="Email Admin" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-code" class="col-sm-2 control-label">Kode(NIM, NIDN, User Eksternal)</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="<?= $data['kode'] ?>" class="form-control  text-center"
-                                    name="kode" id="input-code" placeholder="Kode User" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-jenis" class="col-md-2 control-label">Jenis Admin</label>
-                            <div class="col-md-10">
-                                <select class="form-control  text-center" name="jenis" id="input-jenis">
-                                    <option value='<?= encrypt($data['id_level'], $key) ?>'><?= $data['level']; ?></option>
-                                    <?php
-                                    $id_level = $data['id_level'];
-                                    $qry_level = mysqli_query($koneksi, "SELECT * FROM level_admin WHERE id_level != '$id_level'");
-                                    while ($level = mysqli_fetch_array($qry_level)) {
-                                        echo "
-                                        <option value='" . encrypt($level['id_level'], $key) . "'>" . $level['level'] . " </option>
-                                        ";
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <button type="submit" name="<?= md5('update_admin') ?>" class="btn btn-success">Simpan</button>
-                            <a href="?hlm=user" class="btn btn-danger">Batal</a>
-                        </div>
-                    </form>
-                    <hr class="divider" />
-                </div>
-            </div>
-        <?php } ?>
-        <script>
-            let count = 5;
-            let countdown = setInterval(function () {
-                document.getElementById("cd").innerHTML = count;
-                count--;
-                if (count == -1) {
-                    document.location.href = "?hlm=user";
-                }
-            }, 1000);
-            let countdownAdmin = setInterval(function () {
-                document.getElementById("cda").innerHTML = count;
-                count--;
-                if (count == -1) {
-                    document.location.href = "?hlm=admin";
-                }
-            }, 1000);
-        </script>
+
+
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+<?php
+include "public/view/layouts/footer.php";
+?>

@@ -118,6 +118,12 @@ if ($_SESSION['level'] == "admin") {
             case 'DataKelas':
                 include "./public/view/layouts/admin/data_kelas.php";
                 break;
+            case 'detail-kelas':
+                include "./public/view/layouts/admin/edit_kelas.php";
+                break;
+            case 'edit-siswa':
+                include "./public/view/layouts/admin/edit_siswa.php";
+                break;
             case 'guru':
                 include "./public/view/layouts/admin/data_guru.php";
                 break;
