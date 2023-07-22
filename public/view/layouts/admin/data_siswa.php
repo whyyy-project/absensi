@@ -18,7 +18,8 @@ include "public/view/partials/admin/admin_modal.php";
     <div class="row">
         <?php
         include "query/admin/dashboard.php";
-        include "public/view/layouts/admin/top-content.php"; ?>
+        include "public/view/layouts/admin/top-content.php";
+        include "query/admin/siswa.php" ?>
 
         <!-- Area Chart -->
         <div class="col-xl-12 col-lg-12">
@@ -35,127 +36,42 @@ include "public/view/partials/admin/admin_modal.php";
                             <a class="dropdown-item" href="?hlm=siswa">Refresh</a>
                             <a class="dropdown-item" href="#">Download</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Tambah Siswa</a>
+                            <a class="dropdown-item" href="?hlm=tambah-siswa">Tambah Siswa</a>
                         </div>
                     </div>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th>No</th>
-                                    <th>Nis</th>
-                                    <th>Nama</th>
                                     <th>Id Card</th>
+                                    <th>NIS</th>
+                                    <th>Nama</th>
+                                    <th>Kelas</th>
                                     <th>Tahun Masuk</th>
                                     <th>Status</th>
                                     <th>Edit</th>
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nis</th>
-                                    <th>Nama</th>
-                                    <th>Id Card</th>
-                                    <th>Tahun Masuk</th>
-                                    <th>Status</th>
-                                    <th>Edit</th>
-                                </tr>
-                            </tfoot>
+
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>123456</td>
-                                    <td>Andi Wijaya</td>
-                                    <td>2023</td>
-                                    <td>2018</td>
-                                    <td>Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>654321</td>
-                                    <td>Siti Rahayu</td>
-                                    <td>4567</td>
-                                    <td>2019</td>
-                                    <td>Tidak Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>789012</td>
-                                    <td>Budi Santoso</td>
-                                    <td>1245</td>
-                                    <td>2020</td>
-                                    <td>Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>345678</td>
-                                    <td>Ratna Sari</td>
-                                    <td>7890</td>
-                                    <td>2018</td>
-                                    <td>Tidak Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>901234</td>
-                                    <td>Ahmad Sutomo</td>
-                                    <td>1010</td>
-                                    <td>2018</td>
-                                    <td>Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>567890</td>
-                                    <td>Fitriani</td>
-                                    <td>2022</td>
-                                    <td>2019</td>
-                                    <td>Tidak Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>234567</td>
-                                    <td>Agus Setiawan</td>
-                                    <td>3546</td>
-                                    <td>2021</td>
-                                    <td>Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>890123</td>
-                                    <td>Rani Putri</td>
-                                    <td>7583</td>
-                                    <td>2022</td>
-                                    <td>Tidak Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>456789</td>
-                                    <td>Joko Wibowo</td>
-                                    <td>4268</td>
-                                    <td>2023</td>
-                                    <td>Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>678901</td>
-                                    <td>Sinta Dewi</td>
-                                    <td>6037</td>
-                                    <td>2021</td>
-                                    <td>Aktif</td>
-                                    <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
-                                </tr>
+                                <?php $no = 1; ?>
+                                <?php foreach ($qrySiswa as $data) : ?>
+                                    <tr class="text-center">
+                                        <td><?= $no;
+                                            $no++ ?></td>
+                                        <td><?= $data['uuid'] ?></td>
+                                        <td><?= $data['nis'] ?></td>
+                                        <td><?= $data['nama_siswa'] ?></td>
+                                        <td><?= $data['nama_kelas'] ?></td>
+                                        <td><?= $data['angkatan'] ?></td>
+                                        <td><?= $data['status'] == 1 ? "Aktif" : "Tidak Aktif" ?></td>
+                                        <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

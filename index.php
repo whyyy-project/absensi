@@ -124,6 +124,9 @@ if ($_SESSION['level'] == "admin") {
             case 'siswa':
                 include "./public/view/layouts/admin/data_siswa.php";
                 break;
+            case 'tambah-siswa':
+                include "./public/view/layouts/admin/tambah_siswa.php";
+                break;
             case 'cover':
                 include "./public/view/layouts/cover.php";
                 break;
