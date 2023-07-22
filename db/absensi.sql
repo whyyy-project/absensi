@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2023 at 08:18 PM
+-- Generation Time: Jul 22, 2023 at 10:21 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,8 +39,7 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`id_akun`, `username`, `password`, `level_akun`) VALUES
-(1, 'wahyu123', '8cbbdc3fff847eee79abadc7b693b60e', 'guru'),
-(2, 'adi12345', '0192023a7bbd73250516f069df18b500', 'admin');
+(1, 'abror1000', '78aef6bf53f74cddd36b05b6ad2dd14d', 'admin');
 
 -- --------------------------------------------------------
 
@@ -61,8 +60,7 @@ CREATE TABLE `kariyawan` (
 --
 
 INSERT INTO `kariyawan` (`id_kariyawan`, `nama_kariyawan`, `jenis`, `id_akun`, `id_kelas`) VALUES
-(1, 'John Yoe', 'Guru', 1, 8),
-(2, 'John Adie', 'Staff TU', 2, NULL);
+(1, 'Admin Abror', 'Staff TU', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -80,14 +78,6 @@ CREATE TABLE `tb_absen_siswa` (
   `status_absen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `tb_absen_siswa`
---
-
-INSERT INTO `tb_absen_siswa` (`id_absen_siswa`, `id_siswa`, `tgl`, `masuk`, `pulang`, `keterangan_absen`, `status_absen`) VALUES
-(48, 2, '2023-07-20', '05:32:46', '00:00:00', 'Masuk', 'Tepat Waktu'),
-(49, 2, '2023-07-12', '05:32:46', '00:00:00', 'Masuk', 'Selamat Datang');
-
 -- --------------------------------------------------------
 
 --
@@ -100,18 +90,6 @@ CREATE TABLE `tb_kelas` (
   `angkatan_kelas` varchar(255) NOT NULL,
   `status_kelas` enum('1','0') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tb_kelas`
---
-
-INSERT INTO `tb_kelas` (`id_kelas`, `nama_kelas`, `angkatan_kelas`, `status_kelas`) VALUES
-(8, 'X IPS 1', '2000', '1'),
-(9, 'XI IPA 2', '2021', '1'),
-(10, 'X IPS 10', '2022', '1'),
-(11, 'XII IPA 1', '2023', '0'),
-(12, 'XI IPS 1', '2024', '1'),
-(13, 'XI IPA 4', '2018', '1');
 
 -- --------------------------------------------------------
 
@@ -156,15 +134,6 @@ CREATE TABLE `tb_rekap` (
   `31` enum('H','S','I','A') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `tb_rekap`
---
-
-INSERT INTO `tb_rekap` (`id_rekap`, `id_siswa`, `bulan`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `24`, `25`, `26`, `27`, `28`, `29`, `30`, `31`) VALUES
-(6, 2, '03-2000', 'H', 'S', 'H', 'H', 'A', 'H', 'A', 'S', 'I', NULL, NULL, NULL, 'I', NULL, NULL, 'H', NULL, NULL, NULL, NULL, 'H', 'H', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, 2, '05-2000', 'S', 'H', 'H', 'H', 'A', 'I', 'A', 'S', 'H', NULL, NULL, NULL, 'H', NULL, NULL, 'H', NULL, 'H', NULL, NULL, 'H', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, 2, '03-2000', 'S', 'S', 'H', 'H', 'A', 'H', 'A', 'S', 'I', NULL, NULL, NULL, 'I', NULL, NULL, 'H', NULL, NULL, NULL, NULL, NULL, 'H', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -182,14 +151,6 @@ CREATE TABLE `tb_siswa` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tb_siswa`
---
-
-INSERT INTO `tb_siswa` (`id_siswa`, `uuid`, `id_kelas`, `nis`, `nama_siswa`, `angkatan`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'adacdcasa', 8, '222222', 'Wahyu Nur Cahyo', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00'),
-(4, 'as3efi09', 8, '222222', 'Adi Sukmana', '2017', '1', '2023-05-13 23:49:52', '2023-07-20 03:39:00');
 
 -- --------------------------------------------------------
 
@@ -282,7 +243,7 @@ ALTER TABLE `tb_absen_siswa`
 -- AUTO_INCREMENT for table `tb_kelas`
 --
 ALTER TABLE `tb_kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_rekap`
@@ -294,7 +255,7 @@ ALTER TABLE `tb_rekap`
 -- AUTO_INCREMENT for table `tb_siswa`
 --
 ALTER TABLE `tb_siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `temp_rfid`

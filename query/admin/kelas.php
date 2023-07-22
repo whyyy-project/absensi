@@ -13,3 +13,8 @@ function waliKelas($kodeKelas, $db)
     $namaWali['nama_kariyawan'] == null ? $wali = "Belum dipilih" : $wali = $namaWali['nama_kariyawan'];
     return $wali;
 }
+function seluruhKelas($db)
+{
+    $qryKelas = mysqli_query($db, "SELECT * FROM tb_kelas WHERE status_kelas = 1 ORDER BY nama_kelas ASC");
+    return $qryKelas;
+}
