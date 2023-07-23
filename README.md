@@ -2,5 +2,3 @@
 
 # project absensi
 
-# nyoba
-# Gofarul Banser
