@@ -30,10 +30,20 @@ $dataSpesifik = mysqli_fetch_array($data_kelas);
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Master Data Siswa</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Setting Data Kelas</h6>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, culpa.</p>
+
+                    <div class="dropdown">
+                        <label for="status" class="col-6"> Status Kelas :</label>
+                        <button class="btn btn-info col-5 text-center dropdown-toggle" type="button" id="status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="<?= $siswa[$i] ?>">
+                            <span class="">Aktif</span>
+                        </button>
+                        <div class="dropdown-menu col-5 text-center" aria-labelledby="status">
+                            <a class="dropdown-item" href="#" data-value="Aktif">Aktif</a>
+                            <a class="dropdown-item" href="#" data-value="Lulus">Lulus</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
