@@ -22,12 +22,6 @@
     <style>
         .bg-scan-image {
             background-image: url("public/images/scan_image.jpg");
-            /* jika scan gagal gambar jadi
-            background-image: url("public/images/scan_image2.jpg"); */
-
-            /* jika scan berhasil gambar jadi 
-            background-image: url("public/images/scan_image3.jpg"); */
-
             background-position: center;
             background-size: cover;
         }
@@ -42,12 +36,15 @@
             background-image: url("public/images/scan_image3.jpg");
             background-position: center;
             background-size: contain;
+            background-repeat: no-repeat;
+
         }
 
         .bg-scan4-image {
             background-image: url("public/images/goodbye.jpg");
             background-position: center;
             background-size: contain;
+            background-repeat: no-repeat;
         }
     </style>
 
