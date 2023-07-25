@@ -68,7 +68,7 @@ include "public/view/partials/admin/admin_modal.php";
                                         <td><?= $data['nama_kelas'] ?></td>
                                         <td><?= $data['angkatan'] ?></td>
                                         <td><?= $data['status'] == 1 ? "Aktif" : "Tidak Aktif" ?></td>
-                                        <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
+                                        <td><a href="?hlm=edit-siswa&id=<?= $data['uuid'] ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

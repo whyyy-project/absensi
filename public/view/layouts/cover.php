@@ -167,7 +167,7 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="detail-box">
+                                    <div class="detail-box bg-transparent text-left">
                                         <h1>
                                             System
                                             <span>
