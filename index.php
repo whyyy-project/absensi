@@ -121,6 +121,24 @@ if ($_SESSION['level'] == "admin") {
             $stat = "gagal";
         }
     }
+    if (isset($_POST['edit-siswa'])) {
+        $namaSiswa = htmlspecialchars($_POST['nama-siswa']);
+        $nis = htmlspecialchars($_POST['nis']);
+        $angkatan = htmlspecialchars($_POST['angkatan']);
+        $kelas = htmlspecialchars($_POST['kelas']);
+        $statusSiswa = htmlspecialchars($_POST['status']);
+        $idKelas = decrypt($kelas, $key);
+        $encryptID = htmlspecialchars($_POST['id']);
+        $idSiswa = decrypt($encryptID, $key);
+        $_POST['uuid'] == "Harap Scan" ? $uuid = decrypt($_POST['oldUuid'], $key) : $uuid = htmlspecialchars($_POST['uuid']);
+        $showKelas = mysqli_query($db, "SELECT * FROM tb_kelas WHERE id_kelas = '$idKelas'");
+        if (mysqli_num_rows($showKelas) == 1) {
+            $tambahSiswa = mysqli_query($db, "UPDATE `tb_siswa` SET `uuid` = '$uuid', `id_kelas` = '$idKelas', `nis` = '$nis', `nama_siswa` = '$namaSiswa', `angkatan` = '$angkatan', `status` = '$statusSiswa', `updated_at` = '$datetime' WHERE `tb_siswa`.`id_siswa` = $idSiswa");
+            $tambahSiswa ? $stat = "berhasil" : $stat = "gagal";
+        } else {
+            $stat = "gagal";
+        }
+    }
     $title = "admin | Sistem Absensi";
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];

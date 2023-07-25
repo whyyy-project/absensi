@@ -71,7 +71,8 @@ include "public/view/partials/admin/admin_modal.php";
                                 <?php endforeach; ?>
                             </select>
                         </div>
-
+                        <input type="hidden" name="id" class="d-none" value="<?= encrypt($getSiswa['id_siswa'], $key) ?>">
+                        <input type="hidden" name="oldUuid" class="d-none" value="<?= encrypt($getSiswa['uuid'], $key) ?>">
                         <div id="id-card"></div>
                         <div class="form-group d-flex">
                             <sup class="col-10 mb-2 text-danger text-center">* Scan ID Card jika ingin diubah</sup>
@@ -79,7 +80,7 @@ include "public/view/partials/admin/admin_modal.php";
 
 
                         <div class="form-group text-center mt-2">
-                            <button type="submit" name="tambah-siswa" class="btn btn-success">Simpan</button>
+                            <button type="submit" name="edit-siswa" class="btn btn-success">Simpan</button>
                             <a href="?hlm=siswa" class="btn btn-danger ml-3">Batal</a>
                         </div>
                     </form>

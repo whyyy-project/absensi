@@ -67,8 +67,8 @@ include "public/view/partials/admin/admin_modal.php";
                                         <td><?= $data['nama_siswa'] ?></td>
                                         <td><?= $data['nama_kelas'] ?></td>
                                         <td><?= $data['angkatan'] ?></td>
-                                        <td><?= $data['status'] == 1 ? "Aktif" : "Tidak Aktif" ?></td>
-                                        <td><a href="?hlm=edit-siswa&id=<?= $data['uuid'] ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a></td>
+                                        <td><?= $data['status'] == 1 ? "Aktif" : "Lulus/Keluar" ?></td>
+                                        <td><a href="?hlm=edit-siswa&id=<?= encrypt($data['uuid'], $key) ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

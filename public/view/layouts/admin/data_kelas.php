@@ -23,7 +23,7 @@ include "public/view/partials/admin/admin_modal.php";
             $randomValue = $dataArray[$randomIndex];
             ?>
             <div class="col-xl-3 col-md-6 col-sm-6 mb-4">
-                <a class="text-decoration-none" href="?hlm=detail-kelas">
+                <a class="text-decoration-none" href="?hlm=detail-kelas&id=<?= encrypt($kelas['id_kelas'], $key) ?>">
                     <div class="card border-left-<?= $randomValue ?> shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
