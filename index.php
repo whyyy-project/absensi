@@ -4,7 +4,7 @@ include "query/encrypt.php";
 //session untuk login
 session_start();
 // session untuk logout
-// contoh session
+$datetime = date('Y-m-d H:i:s');
 
 if (isset($_POST['login'])) {
     $username = htmlspecialchars($_POST['username']);
@@ -104,6 +104,22 @@ if ($_SESSION['level'] == "admin") {
         $angkatanKelas = htmlspecialchars($_POST['angkatan']);
         $tambahKelas = mysqli_query($db, "INSERT INTO `tb_kelas` (`id_kelas`, `nama_kelas`, `angkatan_kelas`) VALUES (NULL, '$namaKelas', '$angkatanKelas')");
         $tambahKelas ? $stat = "berhasil" : $stat = "gagal";
+    }
+    if (isset($_POST['tambah-siswa'])) {
+        $namaSiswa = htmlspecialchars($_POST['nama-siswa']);
+        $nis = htmlspecialchars($_POST['nis']);
+        $angkatan = htmlspecialchars($_POST['angkatan']);
+        $kelas = htmlspecialchars($_POST['kelas']);
+        $idKelas = decrypt($kelas, $key);
+        $_POST['uuid'] == "Harap Scan" ? $uuid = "Belum terisi" : $uuid = htmlspecialchars($_POST['uuid']);
+        $showKelas = mysqli_query($db, "SELECT * FROM tb_kelas WHERE id_kelas = '$idKelas'");
+        if (mysqli_num_rows($showKelas) == 1) {
+            $tambahSiswa = mysqli_query($db, "INSERT INTO `tb_siswa` (`id_siswa`, `uuid`, `id_kelas`, `nis`, `nama_siswa`, `angkatan`, `status`, `created_at`, `updated_at`)
+            VALUES (NULL, '$uuid', '$idKelas', '$nis', '$namaSiswa', '$angkatan', '1', '$datetime', '$datetime')");
+            $tambahSiswa ? $stat = "berhasil" : $stat = "gagal";
+        } else {
+            $stat = "gagal";
+        }
     }
     $title = "admin | Sistem Absensi";
     if (isset($_REQUEST['hlm'])) {

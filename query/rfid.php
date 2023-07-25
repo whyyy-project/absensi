@@ -54,7 +54,7 @@ function dataKosong()
 }
 function cetakAbsen($db, $id_card)
 {
-    $data_siswa = mysqli_query($db, "SELECT * FROM tb_siswa WHERE uuid = '$id_card' LIMIT 1");
+    $data_siswa = mysqli_query($db, "SELECT * FROM tb_siswa WHERE uuid = '$id_card' ORDER BY id_siswa DESC LIMIT 1");
     $row_siswa = mysqli_num_rows($data_siswa);
     if ($row_siswa >= 1) {
         $data_s = mysqli_fetch_array($data_siswa);

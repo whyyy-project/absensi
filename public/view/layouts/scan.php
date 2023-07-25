@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="public/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
@@ -43,13 +41,13 @@
         .bg-scan3-image {
             background-image: url("public/images/scan_image3.jpg");
             background-position: center;
-            background-size: cover;
+            background-size: contain;
         }
 
         .bg-scan4-image {
-            background-image: url("public/images/logo-scan.png");
+            background-image: url("public/images/goodbye.jpg");
             background-position: center;
-            background-size: cover;
+            background-size: contain;
         }
     </style>
 
@@ -98,7 +96,7 @@
             xhr.open("GET", "query/rfid.php", true);
 
             // Mengatur fungsi penanganan ketika permintaan selesai
-            xhr.onload = function () {
+            xhr.onload = function() {
                 if (xhr.status === 200) {
                     // Mengisi isi div dengan respon dari content.php
                     idCardDiv.innerHTML = xhr.responseText;
