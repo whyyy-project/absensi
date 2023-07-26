@@ -139,7 +139,7 @@ if ($_SESSION['level'] == "admin") {
             $stat = "gagal";
         }
     }
-    $title = "admin | Sistem Absensi";
+    $title = "Admin | Sistem Absensi";
     if (isset($_REQUEST['hlm'])) {
         $hlm = $_REQUEST['hlm'];
         switch ($hlm) {

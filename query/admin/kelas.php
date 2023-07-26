@@ -18,3 +18,13 @@ function seluruhKelas($db)
     $qryKelas = mysqli_query($db, "SELECT * FROM tb_kelas WHERE status_kelas = 1 ORDER BY nama_kelas ASC");
     return $qryKelas;
 }
+function siswaByKelas($id, $db)
+{
+    $qrySiswaByKelas = mysqli_query($db, "SELECT * FROM `tb_siswa` WHERE id_kelas = '$id';");
+    return $qrySiswaByKelas;
+}
+function showWali($db)
+{
+    $getWali = mysqli_query($db, "SELECT * FROM kariyawan LEFT JOIN akun ON kariyawan.id_akun = akun.id_akun WHERE akun.level_akun = 'guru'");
+    return $getWali;
+}

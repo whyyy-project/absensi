@@ -28,7 +28,7 @@ include "public/view/partials/admin/admin_modal.php";
     <div class="alert alert-<?= $class ?>" role="alert">
         <?= $message ?>
         <div class="badge badge-<?= $class ?>" role="alert" id="minLenght">
-            <a href="?hlm=siswa" class="text-decoration-none text-white <?= $class ?>">lihat daftar kelas</a>
+            <a href="?hlm=siswa" class="text-decoration-none text-white <?= $class ?>">lihat daftar siswa</a>
         </div>
     </div>
     <div class="row">
@@ -41,7 +41,7 @@ include "public/view/partials/admin/admin_modal.php";
                     <?php
                     include "query/admin/siswa.php";
                     ?>
-                    <form action="?hlm=tambah-siswa" method="post" class="user">
+                    <form action="?hlm=edit-siswa&id=<?= $_GET['id'] ?>" method="post" class="user">
                         <div class="form-group d-flex">
                             <label for="nama-siswa" class="col-4 mt-2 text-center">Nama Siswa </label>
                             <input type="text" name="nama-siswa" id="nama-siswa" class="text-center form-control col-6" placeholder="Nama Siswa" value="<?= $getSiswa['nama_siswa'] ?>">
