@@ -190,6 +190,9 @@ if ($_SESSION['level'] == "admin") {
             case 'tambah-siswa':
                 include "./public/view/layouts/admin/tambah_siswa.php";
                 break;
+            case 'edit-guru':
+                include "./public/view/layouts/admin/edit_kariyawan.php";
+                break;
             case 'cover':
                 include "./public/view/layouts/cover.php";
                 break;

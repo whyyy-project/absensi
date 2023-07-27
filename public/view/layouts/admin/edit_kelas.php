@@ -8,6 +8,51 @@ include "query/admin/kelas.php";
 
 ?>
 <?php
+if (isset($_GET['opt'])) {
+    $id_kelas = decrypt($_GET['id'], $key);
+    switch ($_GET['opt']) {
+        case 'aktif':
+            $update = mysqli_query($db, "UPDATE `tb_kelas` SET `status_kelas` = '1' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
+            $update ? $notif = "Berhasil Update Status Kelas" : $notif = "Gagal Update Status Kelas";
+            $update ? $class = "success" : $class = "danger";
+            break;
+        case 'lulus':
+            $update = mysqli_query($db, "UPDATE `tb_kelas` SET `status_kelas` = '0' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
+            $update ? $notif = "Berhasil Update Status Kelas"  : $notif = "Gagal Update Status Kelas";
+            $update ? $class = "success" : $class = "danger";
+            break;
+        case 'wali':
+            $kariyawan = decrypt($_GET['wali'], $key);;
+            $update = mysqli_query($db, "UPDATE `kariyawan` SET `id_kelas` = '$id_kelas' WHERE `kariyawan`.`id_kariyawan` = '$kariyawan'");
+            $update ? $notif = "Berhasil Update Wali Murid"  : $notif = "Gagal Update Wali Murid";
+            $update ? $class = "success" : $class = "danger";
+        case 'nama-kelas':
+            if (empty($_POST['update-nama-kelas']) && empty($_POST['nama_kelas'])) {
+                $notif = "Gagal Update, Data kosong";
+                $class = "danger";
+            } else {
+                $nama_kelas = htmlspecialchars($_POST['nama_kelas']);
+                $update = mysqli_query($db, "UPDATE `tb_kelas` SET `nama_kelas` = '$nama_kelas' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
+                $update ? $notif = "Berhasil Update Nama Kelas"  : $notif = "Gagal Update Nama Kelas";
+                $update ? $class = "success" : $class = "danger";
+            }
+            break;
+        case 'angkatan':
+            if (empty($_POST['update-angkatan']) && empty($_POST['angkatan'])) {
+                $notif = "Gagal Update, Data kosong";
+                $class = "danger";
+            } else {
+                $angkatan = htmlspecialchars($_POST['angkatan']);
+                $update = mysqli_query($db, "UPDATE `tb_kelas` SET `angkatan_kelas` = '$angkatan' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
+                $update ? $notif = "Berhasil Update Nama Kelas"  : $notif = "Gagal Update Nama Kelas";
+                $update ? $class = "success" : $class = "danger";
+            }
+            break;
+    }
+}
+
+?>
+<?php
 $encryptID = htmlspecialchars($_GET['id']);
 $id_kelas = decrypt($encryptID, $key);
 $data_kelas = mysqli_query($db, "SELECT * FROM tb_kelas LEFT JOIN kariyawan ON tb_kelas.id_kelas = kariyawan.id_kelas WHERE tb_kelas.id_kelas = '$id_kelas'");
@@ -22,6 +67,14 @@ $dataSpesifik = mysqli_fetch_array($data_kelas);
 
     </div>
     <!-- end page heading -->
+    <?php if (isset($notif)) : ?>
+        <div class="alert alert-<?= $class ?>" role="alert">
+            <?= $notif ?>
+            <div class="badge badge-<?= $class ?>" role="alert" id="minLenght">
+                <a href="?hlm=DataKelas" class="text-decoration-none text-white">lihat daftar Kelas</a>
+            </div>
+        </div>
+    <?php endif; ?>
 
     <!-- Content Row -->
     <div class="row">
@@ -40,8 +93,8 @@ $dataSpesifik = mysqli_fetch_array($data_kelas);
                             <span class=""><?= $dataSpesifik['status_kelas'] == 1 ? "Aktif" : "Lulus" ?></span>
                         </button>
                         <div class="dropdown-menu col-5 text-center" aria-labelledby="status">
-                            <a class="dropdown-item" href="#" data-value="Aktif">Aktif</a>
-                            <a class="dropdown-item" href="#" data-value="Lulus">Lulus</a>
+                            <a class="dropdown-item" href="?hlm=detail-kelas&id=<?= $_GET['id'] ?>&opt=aktif" data-value="Aktif">Aktif</a>
+                            <a class="dropdown-item" href="?hlm=detail-kelas&id=<?= $_GET['id'] ?>&opt=lulus" data-value="Lulus">Lulus</a>
                         </div>
                     </div>
                     <div class="dropdown mb-2">
@@ -52,25 +105,25 @@ $dataSpesifik = mysqli_fetch_array($data_kelas);
                         <div class="dropdown-menu col-5 text-center" aria-labelledby="wali">
                             <?php $hitung = 1; ?>
                             <?php foreach (showWali($db) as $wali) : ?>
-                                <a class="dropdown-item" href="#" data-value="Aktif"><?= $wali['nama_kariyawan'] ?></a>
+                                <a class="dropdown-item" href="?hlm=detail-kelas&id=<?= $_GET['id'] ?>&opt=wali&wali=<?= encrypt($wali['id_kariyawan'], $key) ?>" data-value="Aktif"><?= $wali['nama_kariyawan'] ?></a>
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <form action="#" method="post">
+                    <form action="?hlm=detail-kelas&id=<?= $_GET['id'] ?>&opt=nama-kelas" method="post">
                         <div class="form-group d-flex mb-2">
                             <label for="nama-kelas" class="col-6 mt-2">Nama Kelas</label>
                             <div class="input-group">
-                                <input type="text" class="form-control text-center col-8" placeholder="Nama Kelas" aria-label="Nama Kelas" aria-describedby="button-addon2" value="<?= $dataSpesifik['nama_kelas'] ?>">
-                                <button class="btn btn-outline-secondary ml-2" type="submit" id="Nama Kelas">Update</button>
+                                <input type="text" class="form-control text-center col-8" placeholder="Nama Kelas" aria-label="Nama Kelas" name="nama_kelas" aria-describedby="button-addon2" value="<?= $dataSpesifik['nama_kelas'] ?>">
+                                <button class="btn btn-outline-secondary ml-2" name="update-nama-kelas" type="submit" id="Nama Kelas">Update</button>
                             </div>
                         </div>
                     </form>
-                    <form action="#" method="post">
+                    <form action="?hlm=detail-kelas&id=<?= $_GET['id'] ?>&opt=angkatan" method="post">
                         <div class="form-group d-flex mb-2">
                             <label for="nama-kelas" class="col-6 mt-2">Angkatan</label>
                             <div class="input-group">
-                                <input type="text" class="form-control text-center col-8" placeholder="Angkatan Kelas" aria-label="angkatan Kelas" aria-describedby="button-addon2" value="<?= $dataSpesifik['angkatan_kelas'] ?>">
-                                <button class="btn btn-outline-secondary ml-2" type="submit" id="button-addon2">Update</button>
+                                <input type="text" class="form-control text-center col-8" placeholder="Angkatan Kelas" aria-label="angkatan Kelas" name="angkatan" aria-describedby="button-addon2" value="<?= $dataSpesifik['angkatan_kelas'] ?>">
+                                <button class="btn btn-outline-secondary ml-2" name="update-angkatan" type="submit" id="button-addon2">Update</button>
                             </div>
                         </div>
                     </form>
