@@ -56,11 +56,20 @@ include "public/view/partials/guru/modals.php";
                                     ?>
                                         <th><?= $i ?></th>
                                     <?php endfor; ?>
+                                    <th>Hadir</th>
+                                    <th>Izin</th>
+                                    <th>Sakit</th>
+                                    <th>Alfa</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                <?php $no = 1 ?>
+                                <?php $no = 1;
+                                $hadir = 0;
+                                $sakit = 0;
+                                $izin = 0;
+                                $alfa = 0;
+                                ?>
                                 <?php foreach ($getRekap as $siswa) : ?>
                                     <tr class="text-center">
                                         <td><?= $no;
@@ -75,6 +84,20 @@ include "public/view/partials/guru/modals.php";
                                             $dateOld = date('D-m-Y', strtotime($tglharian));
                                             $date_explode = explode("-", $dateOld);
                                             $date_explode['0'] == "Mon" ? $detail = 'bg-danger text-white' : $detail = '';
+                                            switch ($siswa[$i]) {
+                                                case 'H':
+                                                    $hadir++;
+                                                    break;
+                                                case 'I':
+                                                    $izin++;
+                                                    break;
+                                                case 'S':
+                                                    $sakit++;
+                                                    break;
+                                                case 'A':
+                                                    $alfa++;
+                                                    break;
+                                            }
                                             ?>
                                             <td class="<?= $detail ?>">
                                                 <div class="dropdown">
@@ -90,6 +113,10 @@ include "public/view/partials/guru/modals.php";
                                                 </div>
                                             </td>
                                         <?php endfor; ?>
+                                        <td><?= $hadir ?></td>
+                                        <td><?= $izin ?></td>
+                                        <td><?= $sakit ?></td>
+                                        <td><?= $alfa ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

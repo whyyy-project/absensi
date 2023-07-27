@@ -36,7 +36,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Menu Wali Kelas:</h6>
-                <a class="collapse-item" href="?hlm=wali">Data Siswa</a>
+                <a class="collapse-item" href="?hlm=siswa">Data Siswa</a>
                 <a class="collapse-item" href="?hlm=rekap">Rekap </a>
 
             </div>

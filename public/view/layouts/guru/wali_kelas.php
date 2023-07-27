@@ -51,7 +51,7 @@ include "public/view/partials/guru/modals.php";
                                         <td><?= $siswa['nama_siswa'] ?></td>
                                         <td><?= $siswa['angkatan'] ?></td>
                                         <td><?= $siswa['status'] == 1 ? "Aktif" : "Tidak Aktif" ?></td>
-                                        <td class="text-center"><a href="#" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a></td>
+                                        <td class="text-center"><a href="?hlm=edit-siswa&id=<?= encrypt($siswa['id_siswa'], $key) ?>" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

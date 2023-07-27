@@ -4,6 +4,6 @@ $qrySiswa = mysqli_query($db, "SELECT * FROM tb_siswa LEFT JOIN tb_kelas ON tb_k
 if (isset($_GET['id'])) {
     $encryptUUID = htmlspecialchars($_GET['id']);
     $uuid = decrypt($encryptUUID, $key);
-    $querySiswa = mysqli_query($db, "SELECT * FROM tb_siswa WHERE uuid = '$uuid' ORDER BY id_siswa DESC LIMIT 1");
+    $querySiswa = mysqli_query($db, "SELECT * FROM tb_siswa WHERE id_siswa = '$uuid' ORDER BY id_siswa DESC LIMIT 1");
     $getSiswa = mysqli_fetch_array($querySiswa);
 }

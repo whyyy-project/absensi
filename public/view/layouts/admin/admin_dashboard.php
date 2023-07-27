@@ -83,6 +83,8 @@ include "public/view/partials/admin/admin_modal.php";
                                             <?php
                                             if ($dataAbs['status_absen'] == "Tepat Waktu") {
                                                 $color = "success";
+                                            } elseif ($dataAbs['status_absen'] == "Selamat Datang") {
+                                                $color = "info";
                                             } else {
                                                 $color = "danger";
                                             }

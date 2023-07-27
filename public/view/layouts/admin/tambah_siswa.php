@@ -27,7 +27,7 @@ include "public/view/partials/admin/admin_modal.php";
     <div class="alert alert-<?= $class ?>" role="alert">
         <?= $message ?>
         <div class="badge badge-<?= $class ?>" role="alert" id="minLenght">
-            <a href="?hlm=siswa" class="text-decoration-none text-white <?= $class ?>">lihat daftar kelas</a>
+            <a href="?hlm=siswa" class="text-decoration-none text-white <?= $class ?>">lihat daftar Siswa</a>
         </div>
     </div>
     <div class="row">
