@@ -18,13 +18,16 @@ include "query/admin/kariyawan.php";
 
     <!-- Content Row -->
     <div class="row">
-
+        <?php
+        include "query/admin/dashboard.php";
+        include "public/view/layouts/admin/top-content.php";
+        include "query/admin/siswa.php" ?>
         <!-- Area Chart -->
         <div class="col-xl-12 col-lg-12">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Data Guru</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Master Data Guru</h6>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
