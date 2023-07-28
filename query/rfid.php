@@ -91,7 +91,7 @@ WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa DESC 
                     <!-- view idcard -->
                     <div class="card bg-<?= $color; ?> text-white shadow">
                         <div class="card-body">
-                            <h3 class="mt-2">
+                            <h3>
                                 <?= $data['nama_siswa']; ?>
                             </h3>
                             <hr>
@@ -101,7 +101,7 @@ WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa DESC 
                             <p>
                                 <?= $data['keterangan_absen']; ?>
                             </p>
-                            <p>
+                            <h5>
                                 <?php
                                 if ($data['keterangan_absen'] != "Masuk") {
                                     echo "IN {$data['masuk']}<br>OUT {$data['pulang']}";
@@ -109,7 +109,7 @@ WHERE tb_siswa.id_siswa = $id_siswa ORDER BY tb_absen_siswa.id_absen_siswa DESC 
                                     echo "IN " . $data['masuk'];
                                 }
                                 ?>
-                            </p>
+                            </h5>
                             <p>
                                 <?= $data['tgl']; ?>
                             </p>

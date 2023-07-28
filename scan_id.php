@@ -73,7 +73,7 @@ if ($absen_terbaru['tgl'] == $tgl) {
     // update pulang
     if ($tempo >= 600) {
         $id_absen = $absen_terbaru['id_absen_siswa'];
-        $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu', `keterangan_absen` = 'Pulang'
+        $absen = mysqli_query($db, "UPDATE `tb_absen_siswa` SET `pulang` = '$waktu', `status_absen` = 'Selamat Jalan' , `keterangan_absen` = 'Pulang'
     WHERE `tb_absen_siswa`.`id_absen_siswa` = '$id_absen' ");
 
         // check rekap ada tidak ?

@@ -17,7 +17,8 @@
 
     <!-- Custom styles for this template-->
     <link href="public/assets/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="public/assets/favicon.ico">
+    <link rel="shortcut icon" href="public/images/abror.ico" />
+
 
     <style>
         .bg-scan-image {
@@ -50,7 +51,7 @@
 
 </head>
 
-<body class="bg-gradient-success">
+<body class="bg-gradient-success d-flex">
 
     <div class="container">
 
