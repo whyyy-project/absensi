@@ -96,13 +96,13 @@
                                 <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> About</a>
+                                <a class="nav-link" href="#"> About Us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">SOP </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Furniture </a>
+                                <a class="nav-link" href="#"> Fiture </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contact us</a>
@@ -191,7 +191,7 @@
                         <div class="carousel-item ">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="detail-box">
+                                    <div class="detail-box bg-transparent text-left">
                                         <h1>
                                             Modern
                                             <span>
@@ -215,7 +215,7 @@
                         <div class="carousel-item ">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="detail-box">
+                                    <div class="detail-box bg-transparent text-left">
                                         <h1>
                                             Easy
                                             <span>
@@ -239,7 +239,7 @@
                         <div class="carousel-item ">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="detail-box">
+                                    <div class="detail-box bg-transparent text-left">
                                         <h1>
                                             Sekolah
                                             <span>
@@ -384,13 +384,13 @@
 
                         <div class="social_box">
                             <a href="https://www.instagram.com/malabrortv/?hl=id">
-                                <img loading="lazy" src="public/assets/images/instagram.png" alt="malabrortv">
+                                <img loading="lazy" src="public/images/instagram.png" alt="malabrortv">
                             </a>
                             <a href="https://www.tiktok.com/@malabrortv?_t=8dQoJthbEYs&_r=1">
-                                <img loading="lazy" src="public/assets/images/tiktok.png" alt="@malabrortv">
+                                <img loading="lazy" src="public/images/tiktok.png" alt="@malabrortv">
                             </a>
                             <a href="https://www.youtube.com/@malabror_tv">
-                                <img loading="lazy" src="public/assets/images/youtube.png" alt="malabror_tv">
+                                <img loading="lazy" src="public/images/youtube.png" alt="malabror_tv">
                             </a>
                         </div>
                     </div>
