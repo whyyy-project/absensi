@@ -61,41 +61,38 @@ $dataKariyawan = mysqli_fetch_array($getdata);
                     <div class="text-center">
                         <h4 class="text-gray-900 m-4">Form Edit Guru/Kariyawan</h4>
                     </div>
-                    <form action="?hlm=edit-guru&id=<?= $_GET['id'] ?>&ak=<?= $dataKariyawan['id_akun'] ?>" method="post" class="user">
+                    <form action="?hlm=edit-guru&id=<?= $_GET['id'] ?>" method="post" class="user">
                         <div class="form-group d-flex">
                             <label for="nama-kariyawan" class="col-4 mt-2 text-center">Nama Kariyawan</label>
-                            <input type="text" name="nama-kariyawan" id="nama-kariyawan" class="text-center form-control col-6" placeholder="Nama Kariyawan" value="<?= $dataKariyawan['nama_kariyawan'] ?>">
+                            <input type="text" name="nama-kariyawan" id="nama-kariyawan" class="text-center form-control col-6" placeholder="Nama Kariyawan">
                         </div>
                         <div class="form-group d-flex">
                             <label for="jabatan" class="col-4 mt-2 text-center">Jabatan</label>
-                            <input type="text" name="jabatan" id="jabatan" class="text-center form-control col-6" placeholder="Jabatan Kariyawan" value="<?= $dataKariyawan['jenis'] ?>">
+                            <input type="text" name="jabatan" id="jabatan" class="text-center form-control col-6" placeholder="Jabatan Kariyawan">
                         </div>
                         <div class="form-group d-flex">
                             <label for="Mulai" class="col-4 mt-2 text-center">tahun Masuk</label>
-                            <input type="text" name="mulai" id="Mulai" class="text-center form-control col-6" placeholder="Tahun Masuk" value="<?= $dataKariyawan['mulai'] ?>">
+                            <input type="text" name="mulai" id="Mulai" class="text-center form-control col-6" placeholder="Tahun Masuk">
                         </div>
                         <div class="form-group d-flex">
                             <label for="jenis" class="col-4 mt-2 text-center">Jenis Akun</label>
                             <select class="custom-select col-6 text-center" name="jenis" id="jenis" required>
-                                <option value="" disabled>Pilih Jenis</option>
-                                <option value="admin" <?= $dataKariyawan['level_akun'] == 'admin' ? 'selected' : '' ?>>Admin</option>
-                                <option value="guru" <?= $dataKariyawan['level_akun'] == 'guru' ? 'selected' : '' ?>>Guru</option>
+                                <option value="" disabled selected>Pilih Jenis</option>
+                                <option value="admin">Admin</option>
+                                <option value="guru">Guru</option>
                             </select>
                         </div>
                         <div class="form-group d-flex">
                             <label for="username" class="col-4 mt-2 text-center">Username</label>
-                            <input type="text" name="username" id="username" class="text-center form-control col-6" placeholder="Username" value="<?= $dataKariyawan['username'] ?>">
+                            <input type="text" name="username" id="username" class="text-center form-control col-6" placeholder="Username">
                         </div>
                         <div class="form-group d-flex">
                             <label for="password-akun" class="col-4 mt-2 text-center">Password</label>
                             <input type="password" name="password-akun" id="password-akun" class="text-center form-control col-6" placeholder="password-akun" autocomplete="off">
                         </div>
-                        <div class="form-group d-flex">
-                            <sup class="col-10 mb-2 text-danger text-center">* Kosongkan jika tidak di ubah!</sup>
-                        </div>
 
                         <div class="form-group text-center mt-2">
-                            <button type="submit" name="edit-kariyawan" class="btn btn-success">Simpan</button>
+                            <button type="submit" name="tambah-kariyawan" class="btn btn-success">Tambah</button>
                             <a href="?hlm=guru" class="btn btn-danger ml-3">Batal</a>
                         </div>
                     </form>

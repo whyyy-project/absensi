@@ -101,7 +101,7 @@ if ($_SESSION['level'] == "guru") {
                 include "./public/view/layouts/guru/rekap.php";
                 break;
             case 'edit-siswa':
-                include "./public/view/layouts/admin/edit_siswa.php";
+                include "./public/view/layouts/guru/edit_siswa.php";
                 break;
             case 'cover':
                 include "./public/view/layouts/cover.php";
@@ -189,6 +189,9 @@ if ($_SESSION['level'] == "admin") {
                 break;
             case 'tambah-siswa':
                 include "./public/view/layouts/admin/tambah_siswa.php";
+                break;
+            case 'tambah-guru':
+                include "./public/view/layouts/admin/tambah_guru.php";
                 break;
             case 'edit-guru':
                 include "./public/view/layouts/admin/edit_kariyawan.php";

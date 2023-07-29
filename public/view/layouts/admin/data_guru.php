@@ -36,7 +36,7 @@ include "query/admin/kariyawan.php";
                             <div class="dropdown-header">Opsi :</div>
                             <a class="dropdown-item" href="?hlm=guru">Refresh</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Tambah Guru</a>
+                            <a class="dropdown-item" href="?hlm=tambah-guru">Tambah Guru</a>
                         </div>
                     </div>
                 </div>

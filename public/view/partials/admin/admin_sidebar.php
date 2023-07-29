@@ -26,20 +26,6 @@
     <div class="sidebar-heading">
         Interface
     </div>
-
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link" href="?hlm=guru">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Data Guru</span></a>
-    </li>
-
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link" href="?hlm=siswa">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Data Siswa</span></a>
-    </li>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -54,6 +40,20 @@
             </div>
         </div>
     </li>
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link" href="?hlm=guru">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Data Guru</span></a>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link" href="?hlm=siswa">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Data Siswa</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
 

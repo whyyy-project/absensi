@@ -15,17 +15,22 @@ if (isset($_GET['opt'])) {
             $update = mysqli_query($db, "UPDATE `tb_kelas` SET `status_kelas` = '1' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
             $update ? $notif = "Berhasil Update Status Kelas" : $notif = "Gagal Update Status Kelas";
             $update ? $class = "success" : $class = "danger";
+            mysqli_query($db, "UPDATE `tb_siswa` SET `status` = '1' WHERE `tb_siswa`.`id_kelas` = '$id_kelas'");
             break;
         case 'lulus':
             $update = mysqli_query($db, "UPDATE `tb_kelas` SET `status_kelas` = '0' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
             $update ? $notif = "Berhasil Update Status Kelas"  : $notif = "Gagal Update Status Kelas";
             $update ? $class = "success" : $class = "danger";
+            if ($update) {
+                mysqli_query($db, "UPDATE `tb_siswa` SET `status` = '0' WHERE `tb_siswa`.`id_kelas` = '$id_kelas'");
+            }
             break;
         case 'wali':
             $kariyawan = decrypt($_GET['wali'], $key);;
             $update = mysqli_query($db, "UPDATE `kariyawan` SET `id_kelas` = '$id_kelas' WHERE `kariyawan`.`id_kariyawan` = '$kariyawan'");
             $update ? $notif = "Berhasil Update Wali Murid"  : $notif = "Gagal Update Wali Murid";
             $update ? $class = "success" : $class = "danger";
+            break;
         case 'nama-kelas':
             if (empty($_POST['update-nama-kelas']) && empty($_POST['nama_kelas'])) {
                 $notif = "Gagal Update, Data kosong";
@@ -41,13 +46,14 @@ if (isset($_GET['opt'])) {
             if (empty($_POST['update-angkatan']) && empty($_POST['angkatan'])) {
                 $notif = "Gagal Update, Data kosong";
                 $class = "danger";
+                break;
             } else {
                 $angkatan = htmlspecialchars($_POST['angkatan']);
                 $update = mysqli_query($db, "UPDATE `tb_kelas` SET `angkatan_kelas` = '$angkatan' WHERE `tb_kelas`.`id_kelas` = $id_kelas;");
                 $update ? $notif = "Berhasil Update Nama Kelas"  : $notif = "Gagal Update Nama Kelas";
                 $update ? $class = "success" : $class = "danger";
+                break;
             }
-            break;
     }
 }
 
