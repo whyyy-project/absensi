@@ -16,12 +16,15 @@ if (isset($_POST['edit-kariyawan'])) {
     $id_akun = htmlspecialchars($_GET['ak']);
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password-akun']);
-    mysqli_query($db, "UPDATE `kariyawan` SET `nama_kariyawan` = '$namaK', `jenis` = '$jabatan', `mulai` = '$mulai',  WHERE `kariyawan`.`id_kariyawan` = '$id_kariyawan'");
+
+    $update = mysqli_query($db, "UPDATE `kariyawan` SET `nama_kariyawan` = '$namaK', `jenis` = '$jabatan', `mulai` = '$mulai' WHERE `kariyawan`.`id_kariyawan` = '$id_kariyawan'");
+
+    $update ? $notif = "Berhasil Update Data Kariyawan" : $notif = "Gagal Update Kariyawan";
+    $update ? $class = "success" : $class = "danger";
     if (!$password) {
-        mysqli_query($db, "UPDATE akun SET username = '$username' WHERE id_akun = '$id_akun'");
-        echo "<h1>Lorem, ipsum dolor.</h1>";
+        mysqli_query($db, "UPDATE akun SET username = '$username', level_akun = '$jenis' WHERE id_akun = '$id_akun'");
     } else {
-        mysqli_query($db, "UPDATE akun SET username = '$username', password = MD5('$password') WHERE id_akun = '$id_akun'");
+        mysqli_query($db, "UPDATE akun SET username = '$username', level_akun = '$jenis', password = MD5('$password') WHERE id_akun = '$id_akun'");
     }
 }
 
@@ -54,6 +57,14 @@ $dataKariyawan = mysqli_fetch_array($getdata);
             <a href="?hlm=guru" class="text-decoration-none text-white <?= $class ?>">lihat daftar Guru</a>
         </div>
     </div>
+    <?php if (isset($notif)) : ?>
+        <div class="alert alert-<?= $class ?>" role="alert">
+            <?= $notif ?>
+            <div class="badge badge-<?= $class ?>" role="alert" id="minLenght">
+                <a href="?hlm=DataKelas" class="text-decoration-none text-white">lihat daftar Kelas</a>
+            </div>
+        </div>
+    <?php endif; ?>
     <div class="row">
         <div class="col-12">
             <div class="card shadow mb-4">
