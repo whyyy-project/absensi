@@ -24,7 +24,7 @@ include "public/view/partials/admin/admin_modal.php";
         $jenis_akun = htmlspecialchars($_POST['jenis']);
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password-akun']);
-        $akun = mysqli_query($db, "INSERT INTO `akun` (`id_akun`, `username`, `password`, `level_akun`) VALUES ('$id_akun', '$username', '$password', '$jenis_akun')");
+        $akun = mysqli_query($db, "INSERT INTO `akun` (`id_akun`, `username`, `password`, `level_akun`) VALUES ('$id_akun', '$username', MD5('$password'), '$jenis_akun')");
         $update = mysqli_query($db, "INSERT INTO `kariyawan` (`id_kariyawan`, `nama_kariyawan`, `jenis`, `mulai`, `id_akun`, `id_kelas`) VALUES (NULL, '$namaK', '$jabatan', '$mulai', '$id_akun', NULL)");
     }
 
