@@ -2,7 +2,7 @@
 // memanggil partials
 include "public/view/layouts/header.php";
 include "public/view/partials/guru/sidebar.php";
-include "public/view/partials/guru/wrapper.php  ";
+include "public/view/partials/guru/wrapper.php";
 include "public/view/partials/guru/modals.php";
 ?>
 <!-- Begin Page Content -->
