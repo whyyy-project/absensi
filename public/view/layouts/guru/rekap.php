@@ -30,18 +30,25 @@ include "public/view/partials/guru/modals.php";
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Data Absensi bulanan</h6>
-                    <div class="dropdown">
-                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="all">
-                            <?= empty($_SESSION['rekap']) || $_SESSION['rekap'] == "all" ? "Filter" : $_SESSION['rekap'] ?>
-                        </button>
-                        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
-                            <a class="dropdown-item" href="?hlm=rekap&filter=all" data-value="all">Tampilkan Semua</a>
-                            <?php foreach ($getBulanRekap as $br) : ?>
-                                <a class="dropdown-item" href="?hlm=rekap&filter=<?= $br['bulan'] ?>"><?= $br['bulan'] ?></a>
-                            <?php endforeach; ?>
+                    <div class="col-md-9">
+                        <h6 class="m-0 font-weight-bold text-primary">Data Absensi bulanan</h6>
+                    </div>
+                    <div class="col-md-3 text-right d-flex">
+                        <a href="#" class="btn btn-outline-success">Download</a>
+                        <div class="dropdown ml-3">
+                            <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="all">
+                                <i class="fas fa-filter"></i>
+                                <?= empty($_SESSION['rekap']) || $_SESSION['rekap'] == "all" ? "Filter" : $_SESSION['rekap'] ?>
+                            </button>
+                            <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton1">
+                                <a class="dropdown-item" href="?hlm=rekap&filter=all" data-value="all">Tampilkan Semua</a>
+                                <?php foreach ($getBulanRekap as $br) : ?>
+                                    <a class="dropdown-item" href="?hlm=rekap&filter=<?= $br['bulan'] ?>"><?= $br['bulan'] ?></a>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">

@@ -108,7 +108,7 @@
                                 <a class="nav-link" href="#">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="mobile-view" href="login">Login</a>
+                                <a class="nav-link" id="mobile-view" href="?hlm=login">Login</a>
                             </li>
                         </ul>
                         <div class="user_option">
