@@ -120,7 +120,7 @@ include "public/view/partials/guru/modals.php";
                                                         <span class="<?= $detail ?>">
                                                             <?php
                                                             if ($siswa[$i] == null && $nama_hari == "Sun") {
-                                                                echo "Minggu";
+                                                                echo "Ahad";
                                                             } else if ($siswa[$i] == null) {
                                                                 echo "Pilih";
                                                             } else {

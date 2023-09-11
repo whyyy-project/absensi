@@ -46,14 +46,14 @@ include "public/view/partials/guru/modals.php";
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                             <div class="dropdown-header">Opsi :</div>
                             <a class="dropdown-item" href="?hlm=dashboard">Refresh</a>
-                            <a class="dropdown-item" href="#">Download</a>
+                            <!-- <a class="dropdown-item" href="#">Download</a> -->
                         </div>
                     </div>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -67,7 +67,7 @@ include "public/view/partials/guru/modals.php";
                             <tbody>
                                 <?php $no = 1 ?>
                                 <?php foreach ($qry_absensi as $dataAbs) : ?>
-                                    <tr>
+                                    <tr class="text-center">
                                         <td><?= $no;
                                             $no++ ?></td>
                                         <td><?= $dataAbs['nama_siswa'] ?></td>
@@ -77,7 +77,7 @@ include "public/view/partials/guru/modals.php";
                                             $date_explode = explode("-", $dateOld);
                                             ?>
                                             <?= $date_explode['2'] . "-" . $date_explode['1'] . "-" . $date_explode['0'] ?></td>
-                                        <td><?= $dataAbs['masuk'] ?></td>
+                                        <td class="<?= $dataAbs['masuk'] > '07:00:00' ? 'bg-danger text-white' : '' ?>"><?= $dataAbs['masuk'] ?></td>
                                         <td><?= $dataAbs['pulang'] ?></td>
                                         <td>
                                             <?php
