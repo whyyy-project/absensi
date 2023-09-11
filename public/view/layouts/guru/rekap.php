@@ -88,7 +88,7 @@ include "public/view/partials/guru/modals.php";
                                         <?php for ($i = 1; $i <= 31; $i++) : ?>
                                             <?php
                                             $getDateNow = date('d-m-Y');
-                                            $hari == $i ? $detail = 'bg-success text-white' : $detail = '';
+                                            $hari == $i ? $detail = ' ' : $detail = '';
                                             $tglharian =  $i . "-" . $siswa['bulan'];
                                             $dateOld = date('D-m-Y', strtotime($tglharian));
                                             $date_explode = explode("-", $dateOld);
