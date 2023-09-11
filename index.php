@@ -11,6 +11,7 @@ if (isset($_POST['login'])) {
     $password = htmlspecialchars($_POST['password']);
     $_SESSION['temp'] = $username;
 
+
     $query_akun = mysqli_query($db, "SELECT * FROM akun LEFT JOIN kariyawan ON akun.id_akun = kariyawan.id_akun WHERE akun.username = '$username' AND akun.password = MD5('$password');");
     $data_akun = mysqli_fetch_array($query_akun);
     if (mysqli_num_rows($query_akun) != 1) {

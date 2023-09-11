@@ -81,6 +81,10 @@
 
         </div>
 
+        <?php
+        // menghilangkan notif danger password salah
+        unset($_SESSION['temp'])
+        ?>
     </div>
     <script>
         function validation() {

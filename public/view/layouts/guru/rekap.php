@@ -60,6 +60,7 @@ include "public/view/partials/guru/modals.php";
                                     <th>Nama</th>
                                     <th>Bulan/Tahun</th>
                                     <?php for ($i = 1; $i <= 31; $i++) :
+
                                     ?>
                                         <th><?= $i ?></th>
                                     <?php endfor; ?>
@@ -86,31 +87,49 @@ include "public/view/partials/guru/modals.php";
                                         <?php $hari = date('d'); ?>
                                         <?php for ($i = 1; $i <= 31; $i++) : ?>
                                             <?php
+                                            $getDateNow = date('d-m-Y');
                                             $hari == $i ? $detail = 'bg-success text-white' : $detail = '';
                                             $tglharian =  $i . "-" . $siswa['bulan'];
                                             $dateOld = date('D-m-Y', strtotime($tglharian));
                                             $date_explode = explode("-", $dateOld);
-                                            $date_explode['0'] == "Mon" ? $detail = 'bg-danger text-white' : $detail = '';
+                                            $nama_hari = $date_explode['0'];
+                                            $date_explode['0'] == "Sun" ? $detail = 'bg-danger text-white' : '';
+                                            // $tglharian == $getDateNow ? $detail = 'bg-success text-white' : '';
                                             switch ($siswa[$i]) {
                                                 case 'H':
                                                     $hadir++;
+                                                    $detail = 'bg-success text-white';
                                                     break;
                                                 case 'I':
+                                                    $detail = 'bg-secondary text-white';
                                                     $izin++;
                                                     break;
                                                 case 'S':
+                                                    $detail = 'bg-warning text-white';
                                                     $sakit++;
                                                     break;
                                                 case 'A':
+                                                    $detail = 'bg-danger text-white';
                                                     $alfa++;
                                                     break;
                                             }
                                             ?>
                                             <td class="<?= $detail ?>">
                                                 <div class="dropdown">
-                                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="<?= $siswa[$i] ?>">
-                                                        <span class="<?= $detail ?>"><?= $siswa[$i] == null ? 'Pilih' : $siswa[$i] ?></span>
-                                                    </button>
+                                                    <a class="text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="<?= $siswa[$i] ?>">
+                                                        <span class="<?= $detail ?>">
+                                                            <?php
+                                                            if ($siswa[$i] == null && $nama_hari == "Sun") {
+                                                                echo "Minggu";
+                                                            } else if ($siswa[$i] == null) {
+                                                                echo "Pilih";
+                                                            } else {
+                                                                echo $siswa[$i];
+                                                            }
+
+                                                            ?>
+                                                        </span>
+                                                    </a>
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                                         <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("A", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="A">A</a>
                                                         <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("H", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="H">H</a>
@@ -125,6 +144,11 @@ include "public/view/partials/guru/modals.php";
                                         <td><?= $sakit ?></td>
                                         <td><?= $alfa ?></td>
                                     </tr>
+                                    <?php
+                                    $sakit = 0;
+                                    $hadir = 0;
+                                    $alfa = 0;
+                                    $izin = 0; ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
@@ -137,6 +161,7 @@ include "public/view/partials/guru/modals.php";
     <!-- /.container-fluid -->
 </div>
 <!-- End of Main Content -->
+
 <?php
 include "public/view/layouts/footer.php";
 ?>
