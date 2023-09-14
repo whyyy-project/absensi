@@ -139,10 +139,10 @@ include "public/view/partials/guru/modals.php";
                                                 </div>
                                             </td>
                                         <?php endfor; ?>
-                                        <td><?= $hadir ?></td>
-                                        <td><?= $izin ?></td>
-                                        <td><?= $sakit ?></td>
-                                        <td><?= $alfa ?></td>
+                                        <td class="bg-success text-white"><?= $hadir ?></td>
+                                        <td class="bg-secondary text-white"><?= $izin ?></td>
+                                        <td class="bg-warning text-white"><?= $sakit ?></td>
+                                        <td class="bg-danger text-white"><?= $alfa ?></td>
                                     </tr>
                                     <?php
                                     $sakit = 0;
