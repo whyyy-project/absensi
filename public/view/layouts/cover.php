@@ -407,7 +407,7 @@
         <div class="container">
             <p>
                 &copy; <?= date('Y') ?> All Rights Reserved By
-                <a href="https://github.com/whyyy24">Whyyy-Project</a>
+                <a href="https://github.com/whyyy-project">Whyyy-Project</a>
             </p>
         </div>
     </section>
