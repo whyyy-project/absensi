@@ -3,7 +3,7 @@
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
             <span>&copy; <?= date('Y') ?> All Rights Reserved By
-                <a href="https://github.com/whyyy24" class="text-decoration-none">Whyyy-Project</a></span>
+                <a href="https://github.com/whyyy-project" class="text-decoration-none">Whyyy-Project</a></span>
         </div>
     </div>
 </footer>
