@@ -195,10 +195,10 @@
             </div>
         </div>
         <h1 class="second-four">4</h1>
-        <p class="wrong-para">Uh Oh! Page not found!</p>
+        <p class="wrong-para">Wahhhh maaf, halaman tidak ada!</p>
         <br>
         <a class="gb" href="./">
-            <p>Go Back</p>
+            <p>halaman utama</p>
         </a>
     </div>
     <script>

@@ -107,6 +107,9 @@ if ($_SESSION['level'] == "guru") {
             case 'cover':
                 include "./public/view/layouts/cover.php";
                 break;
+            case 'export':
+                include "./public/view/layouts/guru/eksport.php";
+                break;
             case '404':
                 include "./public/view/eror/404.php";
                 break;

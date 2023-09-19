@@ -13,12 +13,12 @@
     <meta name="author" content="" />
 
     <title>
-        Welcome | Absensi App
+        SIADI | SISTEM ABSENSI DIPONEGORO
     </title>
 
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-    <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="public/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="public/assets/css/bootstrap.css" />
@@ -29,7 +29,7 @@
     <link href="public/assets/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="public/assets/css/responsive.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="public/images/abror.ico" />
+    <link rel="shortcut icon" href="public/images/icon.ico" />
     <style>
         #mobile-view {
             display: none;
@@ -41,7 +41,12 @@
                 justify-content: center;
             }
         }
-
+        @media (min-width: 992px) {
+    .vh-full {
+        min-height: 75vh;
+        min-width: 150vh;
+    }
+}
         /* wahyu */
         .top-btn {
             position: fixed;
@@ -290,7 +295,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img loading="lazy" src="public/images/cover/tentang.jpeg" alt="">
+                        <img loading="lazy" src="public/images/cover/gambar1.jpg" alt="gambar SMK Diponegoro">
                     </div>
                 </div>
             </div>
@@ -315,7 +320,7 @@
                 <div class="col-md-12">
                     <div class="map_container">
                         <div class="map-responsive">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.658272278782!2d111.923977!3d-7.2602780000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e782b12c820314d%3A0x9ed7d5c71ba0009e!2sMA%20Al-Abror%20Sukosewu!5e0!3m2!1sid!2sid!4v1687914894512!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.205368882793!2d111.65412087404023!3d-7.217399870863853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7762c8ddd4d7a5%3A0x91beacbee5554795!2sSMK%20DIPONEGORO%20PURWOSARI!5e0!3m2!1sid!2sid!4v1708507766177!5m2!1sid!2sid" class="vh-full col-md-12" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -329,9 +334,9 @@
     <section class="info_section layout_padding2">
         <div class="container">
             <div class="info_logo">
-                <h2>
-                    Absensi Siswa
-                </h2>
+                <h3>
+                    SIADI | Sistem Absensi Diponegoro
+                </h3>
             </div>
             <div class="row">
 
@@ -345,7 +350,7 @@
                                 <img loading="lazy" src="public/assets/images/location-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                Jl Raya Sukosewu No. 147
+                            Kemantren, Kuniran, Kec. Purwosari, Kabupaten Bojonegoro, Jawa Timur 62161
                             </p>
                         </div>
                         <div>
@@ -371,8 +376,8 @@
                         <h5>
                             Informasi
                         </h5>
-                        <p>
-                            Adalah salah satu satuan pendidikan dengan jenjang MA di Sukosewu, Kec. Sukosewu, Kab. Bojonegoro, Jawa Timur. Dalam menjalankan kegiatannya, MAS AL ABROR berada di bawah naungan Kementerian Agama.
+                        <p class="text-justify">
+                            SIADI | Sistem Absensi Diponegoro merupakan Inovasi Digital untuk Efisiensi dan Akurasi Absensi di SMK Diponegoro Purwosari Bojonegoro.
                         </p>
                     </div>
                 </div>
@@ -383,14 +388,14 @@
                         </h5>
 
                         <div class="social_box">
-                            <a href="https://www.instagram.com/malabrortv/?hl=id">
-                                <img loading="lazy" src="public/images/instagram.png" alt="malabrortv">
+                            <a href="https://www.instagram.com/smkdiponegoropurwosari/">
+                                <img loading="lazy" src="public/images/instagram.png" alt="SMK DIPONEGORO PURWOSARI">
                             </a>
                             <a href="https://www.tiktok.com/@malabrortv?_t=8dQoJthbEYs&_r=1">
-                                <img loading="lazy" src="public/images/tiktok.png" alt="@malabrortv">
+                                <img loading="lazy" src="public/images/tiktok.png" alt="SMK DIPONEGORO PURWOSARI">
                             </a>
-                            <a href="https://www.youtube.com/@malabror_tv">
-                                <img loading="lazy" src="public/images/youtube.png" alt="malabror_tv">
+                            <a href="https://www.youtube.com/@smkdiponegoropurwosari1930">
+                                <img loading="lazy" src="public/images/youtube.png" alt="SMK DIPONEGORO PURWOSARI">
                             </a>
                         </div>
                     </div>

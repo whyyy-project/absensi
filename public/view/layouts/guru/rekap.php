@@ -34,7 +34,7 @@ include "public/view/partials/guru/modals.php";
                         <h6 class="m-0 font-weight-bold text-primary">Data Absensi bulanan</h6>
                     </div>
                     <div class="col-md-3 text-right d-flex">
-                        <a href="#" class="btn btn-outline-success">Download</a>
+                        <a href="?hlm=export" class="btn btn-outline-success">Export</a>
                         <div class="dropdown ml-3">
                             <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="all">
                                 <i class="fas fa-filter"></i>
@@ -119,7 +119,7 @@ include "public/view/partials/guru/modals.php";
                                                     <a class="text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="<?= $siswa[$i] ?>">
                                                         <span class="<?= $detail ?>">
                                                             <?php
-                                                            if ($siswa[$i] == null && $nama_hari == "Sun") {
+                                                            if ($nama_hari == "Sun") {
                                                                 echo "Ahad";
                                                             } else if ($siswa[$i] == null) {
                                                                 echo "Pilih";
@@ -130,12 +130,16 @@ include "public/view/partials/guru/modals.php";
                                                             ?>
                                                         </span>
                                                     </a>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                        <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("A", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="A">A</a>
-                                                        <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("H", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="H">H</a>
-                                                        <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("I", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="I">I</a>
-                                                        <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("S", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="S">S</a>
-                                                    </div>
+                                                    <?php if ($nama_hari == "Sun") { ?>
+
+                                                    <?php } else { ?>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("A", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="A">A</a>
+                                                            <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("H", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="H">H</a>
+                                                            <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("I", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="I">I</a>
+                                                            <a class="dropdown-item" href="?hlm=rekap&changeAbsensi&tgl=<?= encrypt($i, $key) ?>&status=<?= encrypt("S", $key) ?>&id=<?= encrypt($siswa['id_rekap'], $key) ?>" data-value="S">S</a>
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                             </td>
                                         <?php endfor; ?>

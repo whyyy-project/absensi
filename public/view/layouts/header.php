@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
 
     <meta charset="utf-8">
@@ -21,7 +22,7 @@
     <link href="public/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <!-- icon -->
-    <link rel="shortcut icon" href="public/images/abror.ico" />
+    <link rel="shortcut icon" href="public/images/icon.ico" />
     <style>
         .toggle-password {
             position: absolute;
