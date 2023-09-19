@@ -96,10 +96,9 @@ include "public/view/partials/guru/modals.php";
                     </div>
                 </div>
             </div>
-
-
         </div>
         <!-- end row -->
+
     </div>
     <!-- /.container-fluid -->
 
