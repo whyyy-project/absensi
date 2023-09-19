@@ -49,6 +49,7 @@ include "query/admin/kariyawan.php";
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>Jabatan</th>
+                                    <th>Wali Kelas</th>
                                     <th>Mulai Mengajar</th>
                                     <th>Akun</th>
                                     <th>Edit</th>
@@ -63,6 +64,7 @@ include "query/admin/kariyawan.php";
                                             $no++ ?></td>
                                         <td><?= $k['nama_kariyawan'] ?></td>
                                         <td><?= $k['jenis'] ?></td>
+                                        <td><?= $k['id_kelas'] == null ? "Belum Dipilih" : $k['nama_kelas'] ?></td>
                                         <td><?= $k['mulai'] ?></td>
                                         <td><?= $k['level_akun'] ?></td>
                                         <td><a href="?hlm=edit-guru&id=<?= encrypt($k['id_kariyawan'], $key) ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a></td>

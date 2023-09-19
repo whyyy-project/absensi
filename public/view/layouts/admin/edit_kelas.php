@@ -26,7 +26,8 @@ if (isset($_GET['opt'])) {
             }
             break;
         case 'wali':
-            $kariyawan = decrypt($_GET['wali'], $key);;
+            mysqli_query($db, "UPDATE `kariyawan` SET `id_kelas` = null WHERE `kariyawan`.`id_kelas` = '$id_kelas'");
+            $kariyawan = decrypt($_GET['wali'], $key);
             $update = mysqli_query($db, "UPDATE `kariyawan` SET `id_kelas` = '$id_kelas' WHERE `kariyawan`.`id_kariyawan` = '$kariyawan'");
             $update ? $notif = "Berhasil Update Wali Murid"  : $notif = "Gagal Update Wali Murid";
             $update ? $class = "success" : $class = "danger";
